@@ -197,7 +197,7 @@ export { TransactionIsolationLevel } from \\"./TransactionIsolationLevel\\";
 "
 `;
 
-exports[`enums when \`fullTextSearch\` preview feature is enabled should properly generate enums for relevance: SampleModelOrderByRelevanceFieldEnum 1`] = `
+exports[`enums when \`fullTextSearchPostgres\` preview feature is enabled should properly generate enums for relevance: SampleModelOrderByRelevanceFieldEnum 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 
 export enum SampleModelOrderByRelevanceFieldEnum {
@@ -210,7 +210,7 @@ TypeGraphQL.registerEnumType(SampleModelOrderByRelevanceFieldEnum, {
 "
 `;
 
-exports[`enums when \`fullTextSearch\` preview feature is enabled when model is renamed should properly generate enums for relevance: SampleRenamedModelOrderByRelevanceFieldEnum 1`] = `
+exports[`enums when \`fullTextSearchPostgres\` preview feature is enabled when model is renamed should properly generate enums for relevance: SampleRenamedModelOrderByRelevanceFieldEnum 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 
 export enum SampleRenamedModelOrderByRelevanceFieldEnum {

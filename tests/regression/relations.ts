@@ -453,7 +453,7 @@ describe("relations resolvers generation", () => {
     expect(mainIndexTSFile).toMatchSnapshot("mainIndex");
   });
 
-  describe("when `fullTextSearch` preview feature is enabled", () => {
+  describe("when `fullTextSearchPostgres` preview feature is enabled", () => {
     it("should properly generate args type classes using SearchRelevanceInput", async () => {
       const schema = /* prisma */ `
         model FirstModel {
@@ -471,10 +471,14 @@ describe("relations resolvers generation", () => {
         }
       `;
 
-      await generateCodeFromSchema(schema, {
-        outputDirPath,
-        previewFeatures: ["fullTextSearch"],
-      });
+      await generateCodeFromSchema(
+        schema,
+        {
+          outputDirPath,
+          previewFeatures: ["fullTextSearchPostgres"],
+        },
+        "postgresql",
+      );
       const firstModelSecondModelsFieldArgsTSFile = await readGeneratedFile(
         "/resolvers/relations/FirstModel/args/FirstModelSecondModelsFieldArgs.ts",
       );

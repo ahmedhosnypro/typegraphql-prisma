@@ -151,7 +151,7 @@ describe("enums", () => {
     expect(enumsIndexTSFile).toMatchSnapshot("enums index");
   });
 
-  describe("when `fullTextSearch` preview feature is enabled", () => {
+  describe("when `fullTextSearchPostgres` preview feature is enabled", () => {
     it("should properly generate enums for relevance", async () => {
       const schema = /* prisma */ `
         model SampleModel {
@@ -161,10 +161,14 @@ describe("enums", () => {
         }
       `;
 
-      await generateCodeFromSchema(schema, {
-        outputDirPath,
-        previewFeatures: ["fullTextSearch"],
-      });
+      await generateCodeFromSchema(
+        schema,
+        {
+          outputDirPath,
+          previewFeatures: ["fullTextSearchPostgres"],
+        },
+        "postgresql",
+      );
       const sampleModelOrderByRelevanceFieldEnumTSFile =
         await readGeneratedFile(
           "/enums/SampleModelOrderByRelevanceFieldEnum.ts",
@@ -186,10 +190,14 @@ describe("enums", () => {
           }
         `;
 
-        await generateCodeFromSchema(schema, {
-          outputDirPath,
-          previewFeatures: ["fullTextSearch"],
-        });
+        await generateCodeFromSchema(
+          schema,
+          {
+            outputDirPath,
+            previewFeatures: ["fullTextSearchPostgres"],
+          },
+          "postgresql",
+        );
         const sampleRenamedModelOrderByRelevanceFieldEnumTSFile =
           await readGeneratedFile(
             "/enums/SampleRenamedModelOrderByRelevanceFieldEnum.ts",
