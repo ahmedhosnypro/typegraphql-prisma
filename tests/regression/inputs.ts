@@ -1371,7 +1371,7 @@ describe("inputs", () => {
     expect(indexTSFile).toMatchSnapshot("index");
   });
 
-  describe("when `fullTextSearch` preview feature is enabled", () => {
+  describe("when `fullTextSearchPostgres` preview feature is enabled", () => {
     it("should properly generate input type classes with relevance and string search field", async () => {
       const schema = /* prisma */ `
         model FirstModel {
@@ -1389,10 +1389,14 @@ describe("inputs", () => {
         }
       `;
 
-      await generateCodeFromSchema(schema, {
-        outputDirPath,
-        previewFeatures: ["fullTextSearch"],
-      });
+      await generateCodeFromSchema(
+        schema,
+        {
+          outputDirPath,
+          previewFeatures: ["fullTextSearchPostgres"],
+        },
+        "postgresql",
+      );
       const orderByRelevanceInputTSFile = await readGeneratedFile(
         "/resolvers/inputs/FirstModelOrderByRelevanceInput.ts",
       );
