@@ -79,6 +79,7 @@ export function transformModelWithFields(dmmfDocument: DmmfDocument) {
 function transformModelField(dmmfDocument: DmmfDocument) {
   const { omitInputFieldsByDefault, omitOutputFieldsByDefault } =
     dmmfDocument.options;
+  // ReadonlyDeep<ReadonlyDeep<{ name: string; args: any[]; }
   return (field: PrismaDMMF.Field): DMMF.ModelField => {
     const attributeArgs = parseDocumentationAttributes<{ name: string }>(
       field.documentation,
@@ -221,10 +222,7 @@ function transformOutputType(dmmfDocument: DmmfDocument) {
             field.isNullable !== true && field.name !== "_count";
           const outputTypeInfo: DMMF.TypeInfo = {
             ...field.outputType,
-            type: getMappedOutputTypeName(
-              dmmfDocument,
-              field.outputType.type as string,
-            ),
+            type: getMappedOutputTypeName(dmmfDocument, field.outputType.type),
           };
           const fieldTSType = getFieldTSType(
             dmmfDocument,
@@ -362,7 +360,7 @@ function transformMapping(
         method.args.length > 0
           ? getMappedArgsTypeName(kind, modelTypeName)
           : undefined;
-      const outputTypeName = method.outputType.type as string;
+      const outputTypeName = method.outputType.type;
       const actionResolverName = getMappedActionResolverName(
         kind,
         modelTypeName,
@@ -420,11 +418,11 @@ function selectInputTypeFromTypes(dmmfDocument: DmmfDocument) {
         // skip inputs with `set` and other fields when simple/flat inputs are enabled
         (!useSimpleInputs ||
           !(
-            (it.type as string).includes("OperationsInput") || // postgres specific
+            it.type.includes("OperationsInput") || // postgres specific
             // mongo specific
-            (it.type as string).includes("CreateEnvelopeInput") ||
-            /.+Create.+Input/.test(it.type as string) ||
-            /.+Update.+Input/.test(it.type as string)
+            it.type.includes("CreateEnvelopeInput") ||
+            /.+Create.+Input/.test(it.type) ||
+            /.+Update.+Input/.test(it.type)
           )),
     );
     if (possibleInputTypes.length === 0) {
@@ -441,12 +439,10 @@ function selectInputTypeFromTypes(dmmfDocument: DmmfDocument) {
     const selectedInputType =
       possibleInputTypes.find(it => it.isList) ||
       (useUncheckedScalarInputs &&
-        possibleInputTypes.find(it =>
-          (it.type as string).includes("Unchecked"),
-        )) ||
+        possibleInputTypes.find(it => it.type.includes("Unchecked"))) ||
       possibleInputTypes[0];
 
-    let inputType = selectedInputType.type as string;
+    let inputType = selectedInputType.type;
     if (selectedInputType.location === "enumTypes") {
       const enumDef = dmmfDocument.enums.find(it => it.name === inputType)!;
       inputType = enumDef.typeName;
