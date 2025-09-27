@@ -484,6 +484,9 @@ function getMappedActionName(
     case "findUniqueOrThrow": {
       return `get${typeName}`;
     }
+    case "findFirstOrThrow": {
+      return `getFirst${typeName}`;
+    }
     case "findMany": {
       return camelCase(overriddenPlural ?? pluralize(typeName));
     }
