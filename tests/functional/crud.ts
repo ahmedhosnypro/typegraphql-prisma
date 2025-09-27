@@ -2,6 +2,7 @@ import "reflect-metadata";
 import { promises as fs } from "fs";
 import { buildSchema } from "type-graphql";
 import { graphql, GraphQLSchema } from "graphql";
+import { Prisma } from "@prisma/client";
 
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
@@ -62,6 +63,37 @@ describe("crud resolvers execution", () => {
       expect(prismaMock.user.findUnique.mock.calls).toMatchSnapshot(
         "findUniqueUser call args",
       );
+    });
+
+    it("should propagate PrismaClientKnownRequestError when `findUniqueOrThrow` action fails", async () => {
+      const document = /* graphql */ `
+        query {
+          getUser(where: { uniqueStringField: "uniqueValue" }) {
+            intIdField
+            dateField
+          }
+        }
+      `;
+      const prismaMock = {
+        user: {
+          findUniqueOrThrow: jest.fn().mockRejectedValue(
+            new Prisma.PrismaClientKnownRequestError("Not found", {
+              code: "P2025",
+              clientVersion: "test",
+            }),
+          ),
+        },
+      };
+
+      const { errors } = await graphql({
+        schema: graphQLSchema,
+        source: document,
+        contextValue: { prisma: prismaMock },
+      });
+
+      expect(errors).toMatchInlineSnapshot(`
+        [GraphQLError: Not found]
+      `);
     });
 
     it("should properly call PrismaClient on `findMany` action", async () => {
