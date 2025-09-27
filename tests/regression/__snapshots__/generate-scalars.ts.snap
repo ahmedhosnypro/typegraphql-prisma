@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`custom scalars should properly emit custom scalars file: mainIndex 1`] = `
 "import * as crudResolversImport from \\"./resolvers/crud/resolvers-crud.index\\";

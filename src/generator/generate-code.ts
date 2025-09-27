@@ -506,7 +506,7 @@ export default async function generateCode(
     undefined,
     { overwrite: true },
   );
-  generateCustomScalars(scalarsSourceFile, dmmfDocument.options);
+  generateCustomScalars(scalarsSourceFile, dmmfDocument);
 
   log("Generate custom helpers");
   const helpersSourceFile = project.createSourceFile(

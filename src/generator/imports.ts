@@ -49,10 +49,13 @@ export function generateGraphQLScalarsImport(sourceFile: SourceFile) {
   });
 }
 
-export function generateGraphQLScalarTypeImport(sourceFile: SourceFile) {
+export function generateGraphQLScalarTypeImport(
+  sourceFile: SourceFile,
+  hasBytes: boolean,
+) {
   sourceFile.addImportDeclaration({
     moduleSpecifier: "graphql",
-    namedImports: ["GraphQLScalarType", "Kind"],
+    namedImports: ["GraphQLScalarType", ...(hasBytes ? ["Kind"] : [])],
   });
 }
 

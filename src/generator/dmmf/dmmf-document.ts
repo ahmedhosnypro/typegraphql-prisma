@@ -20,6 +20,7 @@ export class DmmfDocument implements DMMF.Document {
   enums: DMMF.Enum[];
   modelMappings: DMMF.ModelMapping[];
   relationModels: DMMF.RelationModel[];
+  scalarTypeNames: string[];
 
   constructor(
     { datamodel, schema, mappings }: PrismaDMMF.Document,
@@ -85,6 +86,28 @@ export class DmmfDocument implements DMMF.Document {
         );
       })
       .map(generateRelationModel(this));
+
+    const scalarTypes = new Set<string>();
+    this.schema.inputTypes.forEach(inputType =>
+      inputType.fields.forEach(field => {
+        if (field.kind === "scalar") {
+          scalarTypes.add(field.type);
+        }
+      }),
+    );
+    this.schema.outputTypes.forEach(outputType =>
+      outputType.fields.forEach(field => {
+        if (field.kind === "scalar") {
+          scalarTypes.add(field.type);
+        }
+        field.args.forEach(arg => {
+          if (arg.kind === "scalar") {
+            scalarTypes.add(arg.type);
+          }
+        });
+      }),
+    );
+    this.scalarTypeNames = [...scalarTypes];
   }
 
   getModelTypeName(modelName: string): string | undefined {
