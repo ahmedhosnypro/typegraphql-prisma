@@ -1,6 +1,5 @@
-import type { Config } from "@jest/types";
-
-const config: Config.InitialOptions = {
+/** @type {import('jest').Config} */
+const config = {
   verbose: false,
   testEnvironment: "node",
   transform: {
@@ -38,4 +37,4 @@ const config: Config.InitialOptions = {
   prettierPath: require.resolve("prettier-2"),
 };
 
-export default config;
+module.exports = config;
