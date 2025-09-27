@@ -179,6 +179,7 @@ function getInputKeywordPhrasePosition(inputTypeName: string) {
     "ScalarWhere",
     "Where",
     "ListRelationFilter",
+    "ScalarRelationFilter",
     "RelationFilter",
     "Filter",
   ]
