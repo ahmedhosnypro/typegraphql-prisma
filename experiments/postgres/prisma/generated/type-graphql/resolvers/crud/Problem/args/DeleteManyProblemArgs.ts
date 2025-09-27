@@ -8,4 +8,9 @@ export class DeleteManyProblemArgs {
     nullable: true
   })
   where?: ProblemWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

@@ -14,4 +14,9 @@ export class UpdateManyCreatorArgs {
     nullable: true
   })
   where?: CreatorWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

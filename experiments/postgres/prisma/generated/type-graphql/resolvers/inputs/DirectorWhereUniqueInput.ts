@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 import { DirectorFirstNameLastNameCompoundUniqueInput } from "../inputs/DirectorFirstNameLastNameCompoundUniqueInput";
 import { DirectorWhereInput } from "../inputs/DirectorWhereInput";
 import { MovieListRelationFilter } from "../inputs/MovieListRelationFilter";

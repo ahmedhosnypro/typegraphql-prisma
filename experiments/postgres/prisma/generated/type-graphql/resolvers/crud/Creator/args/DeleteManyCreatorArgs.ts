@@ -8,4 +8,9 @@ export class DeleteManyCreatorArgs {
     nullable: true
   })
   where?: CreatorWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

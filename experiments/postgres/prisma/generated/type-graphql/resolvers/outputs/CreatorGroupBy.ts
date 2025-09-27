@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 import { CreatorAvgAggregate } from "../outputs/CreatorAvgAggregate";
 import { CreatorCountAggregate } from "../outputs/CreatorCountAggregate";
 import { CreatorMaxAggregate } from "../outputs/CreatorMaxAggregate";

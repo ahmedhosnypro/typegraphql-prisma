@@ -14,4 +14,9 @@ export class UpdateManyHiddenArgs {
     nullable: true
   })
   where?: HiddenWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

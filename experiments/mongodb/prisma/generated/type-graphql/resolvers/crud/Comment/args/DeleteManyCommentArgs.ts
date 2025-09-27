@@ -8,4 +8,9 @@ export class DeleteManyCommentArgs {
     nullable: true
   })
   where?: CommentWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

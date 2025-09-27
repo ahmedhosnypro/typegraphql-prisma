@@ -8,4 +8,9 @@ export class DeleteManyCategoryArgs {
     nullable: true
   })
   where?: CategoryWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

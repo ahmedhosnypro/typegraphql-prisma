@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 import { CreatorOrderByRelationAggregateInput } from "../inputs/CreatorOrderByRelationAggregateInput";
 import { CreatorOrderByWithRelationInput } from "../inputs/CreatorOrderByWithRelationInput";
 import { ProblemOrderByRelevanceInput } from "../inputs/ProblemOrderByRelevanceInput";

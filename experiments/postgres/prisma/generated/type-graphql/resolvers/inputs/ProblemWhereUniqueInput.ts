@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 import { CreatorListRelationFilter } from "../inputs/CreatorListRelationFilter";
-import { CreatorNullableRelationFilter } from "../inputs/CreatorNullableRelationFilter";
+import { CreatorNullableScalarRelationFilter } from "../inputs/CreatorNullableScalarRelationFilter";
 import { IntNullableFilter } from "../inputs/IntNullableFilter";
 import { ProblemWhereInput } from "../inputs/ProblemWhereInput";
 import { StringFilter } from "../inputs/StringFilter";
@@ -45,8 +45,8 @@ export class ProblemWhereUniqueInput {
   })
   likedBy?: CreatorListRelationFilter | undefined;
 
-  @TypeGraphQL.Field(_type => CreatorNullableRelationFilter, {
+  @TypeGraphQL.Field(_type => CreatorNullableScalarRelationFilter, {
     nullable: true
   })
-  creator?: CreatorNullableRelationFilter | undefined;
+  creator?: CreatorNullableScalarRelationFilter | undefined;
 }

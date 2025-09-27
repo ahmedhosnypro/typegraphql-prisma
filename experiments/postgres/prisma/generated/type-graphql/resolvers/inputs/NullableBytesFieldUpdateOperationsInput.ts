@@ -1,12 +1,12 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 
 @TypeGraphQL.InputType("NullableBytesFieldUpdateOperationsInput", {})
 export class NullableBytesFieldUpdateOperationsInput {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  set?: Buffer | undefined;
+  set?: Uint8Array | undefined;
 }

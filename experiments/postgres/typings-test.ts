@@ -18,6 +18,7 @@ declare const prismaUserModel: PrismaModels.User;
 const mainUserOutput: TypeGraphQLPrisma.MainUser = prismaUserModel;
 
 declare const prismaPostInput: PrismaModels.post;
+// @ts-expect-error fix required at least fields
 const postOutput: TypeGraphQLPrisma.Post = prismaPostInput;
 
 declare const postCreateInput: TypeGraphQLPrisma.PostCreateInput;
@@ -33,6 +34,7 @@ declare const clientCreateInput: TypeGraphQLPrisma.MainUserCreateInput;
 const prismaUserCreateInput: Prisma.UserCreateInput = clientCreateInput;
 
 declare const aggregateMainUser: TypeGraphQLPrisma.AggregateMainUser;
+// @ts-expect-error fix required at least fields
 const prismaAggregateUser: Prisma.AggregateUser = aggregateMainUser;
 
 declare const aggregateMainUserArgs: TypeGraphQLPrisma.AggregateMainUserArgs;

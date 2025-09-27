@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 
 @TypeGraphQL.ObjectType("NativeTypeModelMinAggregate", {})
 export class NativeTypeModelMinAggregate {
@@ -15,10 +15,10 @@ export class NativeTypeModelMinAggregate {
   })
   bigInt!: bigint | null;
 
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  byteA!: Buffer | null;
+  byteA!: Uint8Array | null;
 
   @TypeGraphQL.Field(_type => DecimalJSScalar, {
     nullable: true
