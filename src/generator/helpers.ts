@@ -148,7 +148,7 @@ export function mapScalarToTypeGraphQLType(
       return "DecimalJSScalar";
     }
     case PrismaScalars.Bytes: {
-      return "GraphQLScalars.ByteResolver";
+      return "BytesScalar";
     }
     default: {
       throw new Error(`Unrecognized scalar type: ${scalar}`);

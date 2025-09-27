@@ -52,7 +52,7 @@ export function generateGraphQLScalarsImport(sourceFile: SourceFile) {
 export function generateGraphQLScalarTypeImport(sourceFile: SourceFile) {
   sourceFile.addImportDeclaration({
     moduleSpecifier: "graphql",
-    namedImports: ["GraphQLScalarType"],
+    namedImports: ["GraphQLScalarType", "Kind"],
   });
 }
 
