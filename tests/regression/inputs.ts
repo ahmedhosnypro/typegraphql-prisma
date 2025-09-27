@@ -368,9 +368,6 @@ describe("inputs", () => {
     const firstModelOrderByWithRelationInputTSFile = await readGeneratedFile(
       "/resolvers/inputs/FirstModelOrderByWithRelationInput.ts",
     );
-    const firstModelRelationFilterTSFile = await readGeneratedFile(
-      "/resolvers/inputs/FirstModelRelationFilter.ts",
-    );
     const secondModelWhereInputTSFile = await readGeneratedFile(
       "/resolvers/inputs/SecondModelWhereInput.ts",
     );
@@ -394,9 +391,6 @@ describe("inputs", () => {
     );
     expect(firstModelOrderByWithRelationInputTSFile).toMatchSnapshot(
       "FirstModelOrderByWithRelationInput",
-    );
-    expect(firstModelRelationFilterTSFile).toMatchSnapshot(
-      "FirstModelRelationFilter",
     );
     expect(secondModelWhereInputTSFile).toMatchSnapshot(
       "SecondModelWhereInput",
@@ -995,9 +989,6 @@ describe("inputs", () => {
         await readGeneratedFile(
           "/resolvers/inputs/RenamedFirstModelOrderByWithRelationInput.ts",
         );
-      const renamedFirstModelRelationFilterTSFile = await readGeneratedFile(
-        "/resolvers/inputs/RenamedFirstModelRelationFilter.ts",
-      );
       const renamedSecondModelWhereInputTSFile = await readGeneratedFile(
         "/resolvers/inputs/RenamedSecondModelWhereInput.ts",
       );
@@ -1025,9 +1016,6 @@ describe("inputs", () => {
       );
       expect(renamedFirstModelOrderByWithRelationInputTSFile).toMatchSnapshot(
         "RenamedFirstModelOrderByWithRelationInput",
-      );
-      expect(renamedFirstModelRelationFilterTSFile).toMatchSnapshot(
-        "RenamedFirstModelRelationFilter",
       );
       expect(renamedSecondModelWhereInputTSFile).toMatchSnapshot(
         "RenamedSecondModelWhereInput",
@@ -1371,7 +1359,7 @@ describe("inputs", () => {
     expect(indexTSFile).toMatchSnapshot("index");
   });
 
-  describe("when `fullTextSearch` preview feature is enabled", () => {
+  describe("when `fullTextSearchPostgres` preview feature is enabled", () => {
     it("should properly generate input type classes with relevance and string search field", async () => {
       const schema = /* prisma */ `
         model FirstModel {
@@ -1389,10 +1377,14 @@ describe("inputs", () => {
         }
       `;
 
-      await generateCodeFromSchema(schema, {
-        outputDirPath,
-        previewFeatures: ["fullTextSearch"],
-      });
+      await generateCodeFromSchema(
+        schema,
+        {
+          outputDirPath,
+          previewFeatures: ["fullTextSearchPostgres"],
+        },
+        "postgresql",
+      );
       const orderByRelevanceInputTSFile = await readGeneratedFile(
         "/resolvers/inputs/FirstModelOrderByRelevanceInput.ts",
       );
@@ -1667,5 +1659,29 @@ describe("inputs", () => {
         "FirstModelWhereUniqueInput",
       );
     });
+  });
+
+  it("should properly generate input type classes for filtering Bytes fields", async () => {
+    const schema = /* prisma */ `
+      model BytesModel {
+        id    Int    @id @default(autoincrement())
+        data  Bytes
+      }
+    `;
+
+    await generateCodeFromSchema(schema, { outputDirPath });
+    const bytesFilterTSFile = await readGeneratedFile(
+      "/resolvers/inputs/BytesFilter.ts",
+    );
+    const bytesFieldUpdateOperationsInputTSFile = await readGeneratedFile(
+      "/resolvers/inputs/BytesFieldUpdateOperationsInput.ts",
+    );
+    const indexTSFile = await readGeneratedFile("/resolvers/inputs/index.ts");
+
+    expect(bytesFilterTSFile).toMatchSnapshot("BytesFilter");
+    expect(bytesFieldUpdateOperationsInputTSFile).toMatchSnapshot(
+      "BytesFieldUpdateOperationsInput",
+    );
+    expect(indexTSFile).toMatchSnapshot("index");
   });
 });

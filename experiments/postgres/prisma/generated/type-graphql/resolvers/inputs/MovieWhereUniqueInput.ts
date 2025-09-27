@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
-import { DirectorRelationFilter } from "../inputs/DirectorRelationFilter";
+import { DirectorScalarRelationFilter } from "../inputs/DirectorScalarRelationFilter";
 import { MovieMovieCompoundIdCompoundUniqueInput } from "../inputs/MovieMovieCompoundIdCompoundUniqueInput";
 import { MovieWhereInput } from "../inputs/MovieWhereInput";
 import { StringFilter } from "../inputs/StringFilter";
@@ -44,8 +44,8 @@ export class MovieWhereUniqueInput {
   })
   title?: StringFilter | undefined;
 
-  @TypeGraphQL.Field(_type => DirectorRelationFilter, {
+  @TypeGraphQL.Field(_type => DirectorScalarRelationFilter, {
     nullable: true
   })
-  director?: DirectorRelationFilter | undefined;
+  director?: DirectorScalarRelationFilter | undefined;
 }

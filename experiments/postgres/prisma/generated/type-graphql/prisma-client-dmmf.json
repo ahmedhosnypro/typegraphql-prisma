@@ -35,6 +35,7 @@
       {
         "name": "User",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -46,6 +47,7 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "Int",
+            "nativeType": null,
             "default": {
               "name": "autoincrement",
               "args": []
@@ -64,6 +66,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -77,6 +80,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false,
             "documentation": "renamed field doc\n@TypeGraphQL.field(name: \"firstName\")"
@@ -91,6 +95,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -104,6 +109,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Float",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false,
             "documentation": "@TypeGraphQL.field(name: \"accountBalance\")"
@@ -118,6 +124,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Float",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -131,6 +138,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "post",
+            "nativeType": null,
             "relationName": "posts",
             "relationFromFields": [],
             "relationToFields": [],
@@ -148,6 +156,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Role",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -161,6 +170,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "post",
+            "nativeType": null,
             "relationName": "editorPosts",
             "relationFromFields": [],
             "relationToFields": [],
@@ -178,6 +188,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -191,6 +202,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -204,6 +216,7 @@
       {
         "name": "post",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "uuid",
@@ -215,9 +228,12 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "String",
+            "nativeType": null,
             "default": {
-              "name": "uuid(4)",
-              "args": []
+              "name": "uuid",
+              "args": [
+                4
+              ]
             },
             "isGenerated": false,
             "isUpdatedAt": false,
@@ -233,6 +249,7 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "DateTime",
+            "nativeType": null,
             "default": {
               "name": "now",
               "args": []
@@ -250,6 +267,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "DateTime",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": true,
             "documentation": "@TypeGraphQL.omit(input: [\"create\", \"update\"])"
@@ -264,6 +282,7 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "Boolean",
+            "nativeType": null,
             "default": false,
             "isGenerated": false,
             "isUpdatedAt": false,
@@ -279,6 +298,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -292,6 +312,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false,
             "documentation": "@TypeGraphQL.omit(output: true)"
@@ -306,6 +327,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -319,6 +341,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "User",
+            "nativeType": null,
             "relationName": "posts",
             "relationFromFields": [
               "authorId"
@@ -340,6 +363,7 @@
             "isReadOnly": true,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -353,6 +377,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "User",
+            "nativeType": null,
             "relationName": "editorPosts",
             "relationFromFields": [
               "editorId"
@@ -375,6 +400,7 @@
             "isReadOnly": true,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false,
             "documentation": "@TypeGraphQL.omit(output: true)"
@@ -389,6 +415,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "PostKind",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -402,6 +429,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Json",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -414,6 +442,7 @@
       {
         "name": "Category",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "name",
@@ -425,6 +454,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -438,6 +468,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -451,6 +482,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -476,6 +508,7 @@
       {
         "name": "Patient",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "firstName",
@@ -487,6 +520,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -500,6 +534,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -513,6 +548,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -531,6 +567,7 @@
       {
         "name": "Movie",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "directorFirstName",
@@ -542,6 +579,7 @@
             "isReadOnly": true,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -555,6 +593,7 @@
             "isReadOnly": true,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -568,6 +607,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Director",
+            "nativeType": null,
             "relationName": "DirectorToMovie",
             "relationFromFields": [
               "directorFirstName",
@@ -591,6 +631,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -610,6 +651,7 @@
       {
         "name": "Director",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "firstName",
@@ -621,6 +663,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -634,6 +677,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -647,6 +691,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Movie",
+            "nativeType": null,
             "relationName": "DirectorToMovie",
             "relationFromFields": [],
             "relationToFields": [],
@@ -668,6 +713,7 @@
       {
         "name": "Problem",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -679,6 +725,7 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "Int",
+            "nativeType": null,
             "default": {
               "name": "autoincrement",
               "args": []
@@ -696,6 +743,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -709,6 +757,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Creator",
+            "nativeType": null,
             "relationName": "CreatorToProblem",
             "relationFromFields": [],
             "relationToFields": [],
@@ -725,6 +774,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Creator",
+            "nativeType": null,
             "relationName": "creator",
             "relationFromFields": [
               "creatorId"
@@ -746,6 +796,7 @@
             "isReadOnly": true,
             "hasDefaultValue": false,
             "type": "Int",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -758,6 +809,7 @@
       {
         "name": "Creator",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -769,6 +821,7 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "Int",
+            "nativeType": null,
             "default": {
               "name": "autoincrement",
               "args": []
@@ -786,6 +839,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -799,6 +853,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Problem",
+            "nativeType": null,
             "relationName": "CreatorToProblem",
             "relationFromFields": [],
             "relationToFields": [],
@@ -815,6 +870,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Problem",
+            "nativeType": null,
             "relationName": "creator",
             "relationFromFields": [],
             "relationToFields": [],
@@ -830,6 +886,7 @@
       {
         "name": "NativeTypeModel",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -841,6 +898,10 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "Int",
+            "nativeType": [
+              "Integer",
+              []
+            ],
             "default": {
               "name": "autoincrement",
               "args": []
@@ -858,6 +919,10 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "BigInt",
+            "nativeType": [
+              "BigInt",
+              []
+            ],
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -871,6 +936,10 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Bytes",
+            "nativeType": [
+              "ByteA",
+              []
+            ],
             "isGenerated": false,
             "isUpdatedAt": false
           },
@@ -884,6 +953,10 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "Decimal",
+            "nativeType": [
+              "Decimal",
+              []
+            ],
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -896,6 +969,7 @@
       {
         "name": "Equipment",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -907,9 +981,12 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "String",
+            "nativeType": null,
             "default": {
               "name": "cuid",
-              "args": []
+              "args": [
+                1
+              ]
             },
             "isGenerated": false,
             "isUpdatedAt": false
@@ -924,6 +1001,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -937,6 +1015,7 @@
       {
         "name": "Hidden",
         "dbName": null,
+        "schema": null,
         "fields": [
           {
             "name": "id",
@@ -948,9 +1027,12 @@
             "isReadOnly": false,
             "hasDefaultValue": true,
             "type": "String",
+            "nativeType": null,
             "default": {
               "name": "cuid",
-              "args": []
+              "args": [
+                1
+              ]
             },
             "isGenerated": false,
             "isUpdatedAt": false
@@ -965,6 +1047,7 @@
             "isReadOnly": false,
             "hasDefaultValue": false,
             "type": "String",
+            "nativeType": null,
             "isGenerated": false,
             "isUpdatedAt": false
           }
@@ -1123,7 +1206,8 @@
         {
           "name": "UserWhereInput",
           "meta": {
-            "source": "User"
+            "source": "User",
+            "grouping": "User"
           },
           "constraints": {
             "maxNumFields": null,
@@ -1369,6 +1453,9 @@
         },
         {
           "name": "UserOrderByWithRelationInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -1541,7 +1628,8 @@
         {
           "name": "UserWhereUniqueInput",
           "meta": {
-            "source": "User"
+            "source": "User",
+            "grouping": "User"
           },
           "constraints": {
             "maxNumFields": null,
@@ -1779,6 +1867,9 @@
         },
         {
           "name": "UserOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -1977,7 +2068,8 @@
         {
           "name": "UserScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "User"
+            "source": "User",
+            "grouping": "User"
           },
           "constraints": {
             "maxNumFields": null,
@@ -2198,7 +2290,8 @@
         {
           "name": "postWhereInput",
           "meta": {
-            "source": "post"
+            "source": "post",
+            "grouping": "post"
           },
           "constraints": {
             "maxNumFields": null,
@@ -2471,7 +2564,7 @@
               "isNullable": false,
               "inputTypes": [
                 {
-                  "type": "UserRelationFilter",
+                  "type": "UserScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -2490,7 +2583,7 @@
               "isNullable": true,
               "inputTypes": [
                 {
-                  "type": "UserNullableRelationFilter",
+                  "type": "UserNullableScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -2512,6 +2605,9 @@
         },
         {
           "name": "postOrderByWithRelationInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -2722,7 +2818,8 @@
         {
           "name": "postWhereUniqueInput",
           "meta": {
-            "source": "post"
+            "source": "post",
+            "grouping": "post"
           },
           "constraints": {
             "maxNumFields": null,
@@ -2992,7 +3089,7 @@
               "isNullable": false,
               "inputTypes": [
                 {
-                  "type": "UserRelationFilter",
+                  "type": "UserScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -3011,7 +3108,7 @@
               "isNullable": true,
               "inputTypes": [
                 {
-                  "type": "UserNullableRelationFilter",
+                  "type": "UserNullableScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -3033,6 +3130,9 @@
         },
         {
           "name": "postOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -3269,7 +3369,8 @@
         {
           "name": "postScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "post"
+            "source": "post",
+            "grouping": "post"
           },
           "constraints": {
             "maxNumFields": null,
@@ -3541,7 +3642,8 @@
         {
           "name": "CategoryWhereInput",
           "meta": {
-            "source": "Category"
+            "source": "Category",
+            "grouping": "Category"
           },
           "constraints": {
             "maxNumFields": null,
@@ -3657,6 +3759,9 @@
         },
         {
           "name": "CategoryOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -3719,7 +3824,8 @@
         {
           "name": "CategoryWhereUniqueInput",
           "meta": {
-            "source": "Category"
+            "source": "Category",
+            "grouping": "Category"
           },
           "constraints": {
             "maxNumFields": null,
@@ -3851,6 +3957,9 @@
         },
         {
           "name": "CategoryOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -3965,7 +4074,8 @@
         {
           "name": "CategoryScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Category"
+            "source": "Category",
+            "grouping": "Category"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4082,7 +4192,8 @@
         {
           "name": "PatientWhereInput",
           "meta": {
-            "source": "Patient"
+            "source": "Patient",
+            "grouping": "Patient"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4198,6 +4309,9 @@
         },
         {
           "name": "PatientOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -4260,7 +4374,8 @@
         {
           "name": "PatientWhereUniqueInput",
           "meta": {
-            "source": "Patient"
+            "source": "Patient",
+            "grouping": "Patient"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4392,6 +4507,9 @@
         },
         {
           "name": "PatientOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -4480,7 +4598,8 @@
         {
           "name": "PatientScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Patient"
+            "source": "Patient",
+            "grouping": "Patient"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4597,7 +4716,8 @@
         {
           "name": "MovieWhereInput",
           "meta": {
-            "source": "Movie"
+            "source": "Movie",
+            "grouping": "Movie"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4715,7 +4835,7 @@
               "isNullable": false,
               "inputTypes": [
                 {
-                  "type": "DirectorRelationFilter",
+                  "type": "DirectorScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -4732,6 +4852,9 @@
         },
         {
           "name": "MovieOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -4807,7 +4930,8 @@
         {
           "name": "MovieWhereUniqueInput",
           "meta": {
-            "source": "Movie"
+            "source": "Movie",
+            "grouping": "Movie"
           },
           "constraints": {
             "maxNumFields": null,
@@ -4941,7 +5065,7 @@
               "isNullable": false,
               "inputTypes": [
                 {
-                  "type": "DirectorRelationFilter",
+                  "type": "DirectorScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -4958,6 +5082,9 @@
         },
         {
           "name": "MovieOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -5046,7 +5173,8 @@
         {
           "name": "MovieScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Movie"
+            "source": "Movie",
+            "grouping": "Movie"
           },
           "constraints": {
             "maxNumFields": null,
@@ -5163,7 +5291,8 @@
         {
           "name": "DirectorWhereInput",
           "meta": {
-            "source": "Director"
+            "source": "Director",
+            "grouping": "Director"
           },
           "constraints": {
             "maxNumFields": null,
@@ -5274,6 +5403,9 @@
         },
         {
           "name": "DirectorOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -5336,7 +5468,8 @@
         {
           "name": "DirectorWhereUniqueInput",
           "meta": {
-            "source": "Director"
+            "source": "Director",
+            "grouping": "Director"
           },
           "constraints": {
             "maxNumFields": null,
@@ -5463,6 +5596,9 @@
         },
         {
           "name": "DirectorOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -5538,7 +5674,8 @@
         {
           "name": "DirectorScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Director"
+            "source": "Director",
+            "grouping": "Director"
           },
           "constraints": {
             "maxNumFields": null,
@@ -5637,7 +5774,8 @@
         {
           "name": "ProblemWhereInput",
           "meta": {
-            "source": "Problem"
+            "source": "Problem",
+            "grouping": "Problem"
           },
           "constraints": {
             "maxNumFields": null,
@@ -5773,7 +5911,7 @@
               "isNullable": true,
               "inputTypes": [
                 {
-                  "type": "CreatorNullableRelationFilter",
+                  "type": "CreatorNullableScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -5795,6 +5933,9 @@
         },
         {
           "name": "ProblemOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -5889,7 +6030,8 @@
         {
           "name": "ProblemWhereUniqueInput",
           "meta": {
-            "source": "Problem"
+            "source": "Problem",
+            "grouping": "Problem"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6022,7 +6164,7 @@
               "isNullable": true,
               "inputTypes": [
                 {
-                  "type": "CreatorNullableRelationFilter",
+                  "type": "CreatorNullableScalarRelationFilter",
                   "namespace": "prisma",
                   "location": "inputObjectTypes",
                   "isList": false
@@ -6044,6 +6186,9 @@
         },
         {
           "name": "ProblemOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -6164,7 +6309,8 @@
         {
           "name": "ProblemScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Problem"
+            "source": "Problem",
+            "grouping": "Problem"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6286,7 +6432,8 @@
         {
           "name": "CreatorWhereInput",
           "meta": {
-            "source": "Creator"
+            "source": "Creator",
+            "grouping": "Creator"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6410,6 +6557,9 @@
         },
         {
           "name": "CreatorOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -6485,7 +6635,8 @@
         {
           "name": "CreatorWhereUniqueInput",
           "meta": {
-            "source": "Creator"
+            "source": "Creator",
+            "grouping": "Creator"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6606,6 +6757,9 @@
         },
         {
           "name": "CreatorOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -6707,7 +6861,8 @@
         {
           "name": "CreatorScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Creator"
+            "source": "Creator",
+            "grouping": "Creator"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6806,7 +6961,8 @@
         {
           "name": "NativeTypeModelWhereInput",
           "meta": {
-            "source": "NativeTypeModel"
+            "source": "NativeTypeModel",
+            "grouping": "NativeTypeModel"
           },
           "constraints": {
             "maxNumFields": null,
@@ -6955,6 +7111,9 @@
         },
         {
           "name": "NativeTypeModelOrderByWithRelationInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -7035,7 +7194,8 @@
         {
           "name": "NativeTypeModelWhereUniqueInput",
           "meta": {
-            "source": "NativeTypeModel"
+            "source": "NativeTypeModel",
+            "grouping": "NativeTypeModel"
           },
           "constraints": {
             "maxNumFields": null,
@@ -7181,6 +7341,9 @@
         },
         {
           "name": "NativeTypeModelOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -7326,7 +7489,8 @@
         {
           "name": "NativeTypeModelScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "NativeTypeModel"
+            "source": "NativeTypeModel",
+            "grouping": "NativeTypeModel"
           },
           "constraints": {
             "maxNumFields": null,
@@ -7476,7 +7640,8 @@
         {
           "name": "EquipmentWhereInput",
           "meta": {
-            "source": "Equipment"
+            "source": "Equipment",
+            "grouping": "Equipment"
           },
           "constraints": {
             "maxNumFields": null,
@@ -7579,6 +7744,9 @@
         },
         {
           "name": "EquipmentOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -7634,7 +7802,8 @@
         {
           "name": "EquipmentWhereUniqueInput",
           "meta": {
-            "source": "Equipment"
+            "source": "Equipment",
+            "grouping": "Equipment"
           },
           "constraints": {
             "maxNumFields": null,
@@ -7734,6 +7903,9 @@
         },
         {
           "name": "EquipmentOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -7815,7 +7987,8 @@
         {
           "name": "EquipmentScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Equipment"
+            "source": "Equipment",
+            "grouping": "Equipment"
           },
           "constraints": {
             "maxNumFields": null,
@@ -7919,7 +8092,8 @@
         {
           "name": "HiddenWhereInput",
           "meta": {
-            "source": "Hidden"
+            "source": "Hidden",
+            "grouping": "Hidden"
           },
           "constraints": {
             "maxNumFields": null,
@@ -8022,6 +8196,9 @@
         },
         {
           "name": "HiddenOrderByWithRelationInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -8077,7 +8254,8 @@
         {
           "name": "HiddenWhereUniqueInput",
           "meta": {
-            "source": "Hidden"
+            "source": "Hidden",
+            "grouping": "Hidden"
           },
           "constraints": {
             "maxNumFields": null,
@@ -8177,6 +8355,9 @@
         },
         {
           "name": "HiddenOrderByWithAggregationInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 0
@@ -8258,7 +8439,8 @@
         {
           "name": "HiddenScalarWhereWithAggregatesInput",
           "meta": {
-            "source": "Hidden"
+            "source": "Hidden",
+            "grouping": "Hidden"
           },
           "constraints": {
             "maxNumFields": null,
@@ -8361,6 +8543,9 @@
         },
         {
           "name": "UserCreateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -8510,6 +8695,9 @@
         },
         {
           "name": "UserUncheckedCreateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -8671,6 +8859,9 @@
         },
         {
           "name": "UserUpdateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -8856,6 +9047,9 @@
         },
         {
           "name": "UserUncheckedUpdateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9059,6 +9253,9 @@
         },
         {
           "name": "UserCreateManyInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9194,6 +9391,9 @@
         },
         {
           "name": "UserUpdateManyMutationInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9353,6 +9553,9 @@
         },
         {
           "name": "UserUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9530,6 +9733,9 @@
         },
         {
           "name": "postCreateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9690,6 +9896,9 @@
         },
         {
           "name": "postUncheckedCreateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -9853,6 +10062,9 @@
         },
         {
           "name": "postUpdateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10061,6 +10273,9 @@
         },
         {
           "name": "postUncheckedUpdateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10284,6 +10499,9 @@
         },
         {
           "name": "postCreateManyInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10447,6 +10665,9 @@
         },
         {
           "name": "postUpdateManyMutationInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10629,6 +10850,9 @@
         },
         {
           "name": "postUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10852,6 +11076,9 @@
         },
         {
           "name": "CategoryCreateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10897,6 +11124,9 @@
         },
         {
           "name": "CategoryUncheckedCreateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -10942,6 +11172,9 @@
         },
         {
           "name": "CategoryUpdateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11005,6 +11238,9 @@
         },
         {
           "name": "CategoryUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11068,6 +11304,9 @@
         },
         {
           "name": "CategoryCreateManyInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11113,6 +11352,9 @@
         },
         {
           "name": "CategoryUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11176,6 +11418,9 @@
         },
         {
           "name": "CategoryUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11239,6 +11484,9 @@
         },
         {
           "name": "PatientCreateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11284,6 +11532,9 @@
         },
         {
           "name": "PatientUncheckedCreateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11329,6 +11580,9 @@
         },
         {
           "name": "PatientUpdateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11392,6 +11646,9 @@
         },
         {
           "name": "PatientUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11455,6 +11712,9 @@
         },
         {
           "name": "PatientCreateManyInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11500,6 +11760,9 @@
         },
         {
           "name": "PatientUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11563,6 +11826,9 @@
         },
         {
           "name": "PatientUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11626,6 +11892,9 @@
         },
         {
           "name": "MovieCreateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11660,6 +11929,9 @@
         },
         {
           "name": "MovieUncheckedCreateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11705,6 +11977,9 @@
         },
         {
           "name": "MovieUpdateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11745,6 +12020,9 @@
         },
         {
           "name": "MovieUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11808,6 +12086,9 @@
         },
         {
           "name": "MovieCreateManyInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11853,6 +12134,9 @@
         },
         {
           "name": "MovieUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11880,6 +12164,9 @@
         },
         {
           "name": "MovieUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11943,6 +12230,9 @@
         },
         {
           "name": "DirectorCreateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -11989,6 +12279,9 @@
         },
         {
           "name": "DirectorUncheckedCreateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12035,6 +12328,9 @@
         },
         {
           "name": "DirectorUpdateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12093,6 +12389,9 @@
         },
         {
           "name": "DirectorUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12151,6 +12450,9 @@
         },
         {
           "name": "DirectorCreateManyInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12184,6 +12486,9 @@
         },
         {
           "name": "DirectorUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12229,6 +12534,9 @@
         },
         {
           "name": "DirectorUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12274,6 +12582,9 @@
         },
         {
           "name": "ProblemCreateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12321,6 +12632,9 @@
         },
         {
           "name": "ProblemUncheckedCreateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12384,6 +12698,9 @@
         },
         {
           "name": "ProblemUpdateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12437,6 +12754,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12518,6 +12838,9 @@
         },
         {
           "name": "ProblemCreateManyInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12568,6 +12891,9 @@
         },
         {
           "name": "ProblemUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12595,6 +12921,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12663,6 +12992,9 @@
         },
         {
           "name": "CreatorCreateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12710,6 +13042,9 @@
         },
         {
           "name": "CreatorUncheckedCreateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12769,6 +13104,9 @@
         },
         {
           "name": "CreatorUpdateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12822,6 +13160,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12893,6 +13234,9 @@
         },
         {
           "name": "CreatorCreateManyInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12926,6 +13270,9 @@
         },
         {
           "name": "CreatorUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12953,6 +13300,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -12998,6 +13348,9 @@
         },
         {
           "name": "NativeTypeModelCreateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13058,6 +13411,9 @@
         },
         {
           "name": "NativeTypeModelUncheckedCreateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13130,6 +13486,9 @@
         },
         {
           "name": "NativeTypeModelUpdateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13208,6 +13567,9 @@
         },
         {
           "name": "NativeTypeModelUncheckedUpdateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13304,6 +13666,9 @@
         },
         {
           "name": "NativeTypeModelCreateManyInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13376,6 +13741,9 @@
         },
         {
           "name": "NativeTypeModelUpdateManyMutationInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13454,6 +13822,9 @@
         },
         {
           "name": "NativeTypeModelUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13550,6 +13921,9 @@
         },
         {
           "name": "EquipmentCreateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13588,6 +13962,9 @@
         },
         {
           "name": "EquipmentUncheckedCreateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13626,6 +14003,9 @@
         },
         {
           "name": "EquipmentUpdateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13676,6 +14056,9 @@
         },
         {
           "name": "EquipmentUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13726,6 +14109,9 @@
         },
         {
           "name": "EquipmentCreateManyInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13764,6 +14150,9 @@
         },
         {
           "name": "EquipmentUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13814,6 +14203,9 @@
         },
         {
           "name": "EquipmentUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13864,6 +14256,9 @@
         },
         {
           "name": "HiddenCreateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13902,6 +14297,9 @@
         },
         {
           "name": "HiddenUncheckedCreateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13940,6 +14338,9 @@
         },
         {
           "name": "HiddenUpdateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -13990,6 +14391,9 @@
         },
         {
           "name": "HiddenUncheckedUpdateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -14040,6 +14444,9 @@
         },
         {
           "name": "HiddenCreateManyInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -14078,6 +14485,9 @@
         },
         {
           "name": "HiddenUpdateManyMutationInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -14128,6 +14538,9 @@
         },
         {
           "name": "HiddenUncheckedUpdateManyInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -15053,6 +15466,9 @@
         },
         {
           "name": "IntNullableListFilter",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15156,6 +15572,9 @@
         },
         {
           "name": "StringNullableListFilter",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15259,6 +15678,9 @@
         },
         {
           "name": "PostListRelationFilter",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -15342,6 +15764,9 @@
         },
         {
           "name": "postOrderByRelationAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15364,6 +15789,9 @@
         },
         {
           "name": "UserOrderByRelevanceInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -15417,6 +15845,9 @@
         },
         {
           "name": "UserCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15543,6 +15974,9 @@
         },
         {
           "name": "UserAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15617,6 +16051,9 @@
         },
         {
           "name": "UserMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15717,6 +16154,9 @@
         },
         {
           "name": "UserMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -15817,6 +16257,9 @@
         },
         {
           "name": "UserSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -17531,6 +17974,25 @@
               ]
             },
             {
+              "name": "mode",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "QueryMode",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                },
+                {
+                  "type": "EnumQueryModeFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
               "name": "string_contains",
               "isRequired": false,
               "isNullable": false,
@@ -17585,29 +18047,6 @@
               ]
             },
             {
-              "name": "array_contains",
-              "isRequired": false,
-              "isNullable": true,
-              "inputTypes": [
-                {
-                  "type": "Json",
-                  "location": "scalar",
-                  "isList": false
-                },
-                {
-                  "type": "JsonFieldRefInput",
-                  "namespace": "prisma",
-                  "location": "fieldRefTypes",
-                  "isList": false
-                },
-                {
-                  "type": "Null",
-                  "location": "scalar",
-                  "isList": false
-                }
-              ]
-            },
-            {
               "name": "array_starts_with",
               "isRequired": false,
               "isNullable": true,
@@ -17632,6 +18071,29 @@
             },
             {
               "name": "array_ends_with",
+              "isRequired": false,
+              "isNullable": true,
+              "inputTypes": [
+                {
+                  "type": "Json",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "JsonFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Null",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "array_contains",
               "isRequired": false,
               "isNullable": true,
               "inputTypes": [
@@ -17752,7 +18214,10 @@
           ]
         },
         {
-          "name": "UserRelationFilter",
+          "name": "UserScalarRelationFilter",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -17787,7 +18252,10 @@
           ]
         },
         {
-          "name": "UserNullableRelationFilter",
+          "name": "UserNullableScalarRelationFilter",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -17833,6 +18301,9 @@
         },
         {
           "name": "postOrderByRelevanceInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -17886,6 +18357,9 @@
         },
         {
           "name": "postCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -18038,6 +18512,9 @@
         },
         {
           "name": "postAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -18073,6 +18550,9 @@
         },
         {
           "name": "postMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -18212,6 +18692,9 @@
         },
         {
           "name": "postMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -18351,6 +18834,9 @@
         },
         {
           "name": "postSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19086,6 +19572,25 @@
               ]
             },
             {
+              "name": "mode",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "QueryMode",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                },
+                {
+                  "type": "EnumQueryModeFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
               "name": "string_contains",
               "isRequired": false,
               "isNullable": false,
@@ -19140,29 +19645,6 @@
               ]
             },
             {
-              "name": "array_contains",
-              "isRequired": false,
-              "isNullable": true,
-              "inputTypes": [
-                {
-                  "type": "Json",
-                  "location": "scalar",
-                  "isList": false
-                },
-                {
-                  "type": "JsonFieldRefInput",
-                  "namespace": "prisma",
-                  "location": "fieldRefTypes",
-                  "isList": false
-                },
-                {
-                  "type": "Null",
-                  "location": "scalar",
-                  "isList": false
-                }
-              ]
-            },
-            {
               "name": "array_starts_with",
               "isRequired": false,
               "isNullable": true,
@@ -19187,6 +19669,29 @@
             },
             {
               "name": "array_ends_with",
+              "isRequired": false,
+              "isNullable": true,
+              "inputTypes": [
+                {
+                  "type": "Json",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "JsonFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Null",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "array_contains",
               "isRequired": false,
               "isNullable": true,
               "inputTypes": [
@@ -19347,6 +19852,9 @@
         },
         {
           "name": "CategoryOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19400,6 +19908,9 @@
         },
         {
           "name": "CategoryCategoryCompoundUniqueCompoundUniqueInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19433,6 +19944,9 @@
         },
         {
           "name": "CategoryCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19481,6 +19995,9 @@
         },
         {
           "name": "CategoryAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19503,6 +20020,9 @@
         },
         {
           "name": "CategoryMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19551,6 +20071,9 @@
         },
         {
           "name": "CategoryMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19599,6 +20122,9 @@
         },
         {
           "name": "CategorySumOrderByAggregateInput",
+          "meta": {
+            "grouping": "Category"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19621,6 +20147,9 @@
         },
         {
           "name": "PatientOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19674,6 +20203,9 @@
         },
         {
           "name": "PatientFirstNameLastNameCompoundUniqueInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19707,6 +20239,9 @@
         },
         {
           "name": "PatientCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19755,6 +20290,9 @@
         },
         {
           "name": "PatientMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19803,6 +20341,9 @@
         },
         {
           "name": "PatientMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Patient"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -19850,7 +20391,10 @@
           ]
         },
         {
-          "name": "DirectorRelationFilter",
+          "name": "DirectorScalarRelationFilter",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19886,6 +20430,9 @@
         },
         {
           "name": "MovieOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19939,6 +20486,9 @@
         },
         {
           "name": "MovieMovieCompoundIdCompoundUniqueInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -19984,6 +20534,9 @@
         },
         {
           "name": "MovieCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20032,6 +20585,9 @@
         },
         {
           "name": "MovieMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20080,6 +20636,9 @@
         },
         {
           "name": "MovieMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20128,6 +20687,9 @@
         },
         {
           "name": "MovieListRelationFilter",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20176,6 +20738,9 @@
         },
         {
           "name": "MovieOrderByRelationAggregateInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20198,6 +20763,9 @@
         },
         {
           "name": "DirectorOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20251,6 +20819,9 @@
         },
         {
           "name": "DirectorFirstNameLastNameCompoundUniqueInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20284,6 +20855,9 @@
         },
         {
           "name": "DirectorCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20319,6 +20893,9 @@
         },
         {
           "name": "DirectorMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20354,6 +20931,9 @@
         },
         {
           "name": "DirectorMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20389,6 +20969,9 @@
         },
         {
           "name": "CreatorListRelationFilter",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20436,7 +21019,10 @@
           ]
         },
         {
-          "name": "CreatorNullableRelationFilter",
+          "name": "CreatorNullableScalarRelationFilter",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20482,6 +21068,9 @@
         },
         {
           "name": "CreatorOrderByRelationAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20504,6 +21093,9 @@
         },
         {
           "name": "ProblemOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20557,6 +21149,9 @@
         },
         {
           "name": "ProblemCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20605,6 +21200,9 @@
         },
         {
           "name": "ProblemAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20640,6 +21238,9 @@
         },
         {
           "name": "ProblemMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20688,6 +21289,9 @@
         },
         {
           "name": "ProblemMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20736,6 +21340,9 @@
         },
         {
           "name": "ProblemSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20771,6 +21378,9 @@
         },
         {
           "name": "ProblemListRelationFilter",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20819,6 +21429,9 @@
         },
         {
           "name": "ProblemOrderByRelationAggregateInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20841,6 +21454,9 @@
         },
         {
           "name": "CreatorOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -20894,6 +21510,9 @@
         },
         {
           "name": "CreatorCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20929,6 +21548,9 @@
         },
         {
           "name": "CreatorAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20951,6 +21573,9 @@
         },
         {
           "name": "CreatorMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -20986,6 +21611,9 @@
         },
         {
           "name": "CreatorMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21021,6 +21649,9 @@
         },
         {
           "name": "CreatorSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21490,6 +22121,9 @@
         },
         {
           "name": "NativeTypeModelCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21551,6 +22185,9 @@
         },
         {
           "name": "NativeTypeModelAvgOrderByAggregateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21599,6 +22236,9 @@
         },
         {
           "name": "NativeTypeModelMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21660,6 +22300,9 @@
         },
         {
           "name": "NativeTypeModelMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -21721,6 +22364,9 @@
         },
         {
           "name": "NativeTypeModelSumOrderByAggregateInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22385,6 +23031,9 @@
         },
         {
           "name": "EquipmentOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -22438,6 +23087,9 @@
         },
         {
           "name": "EquipmentCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22473,6 +23125,9 @@
         },
         {
           "name": "EquipmentMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22508,6 +23163,9 @@
         },
         {
           "name": "EquipmentMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Equipment"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22543,6 +23201,9 @@
         },
         {
           "name": "HiddenOrderByRelevanceInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -22596,6 +23257,9 @@
         },
         {
           "name": "HiddenCountOrderByAggregateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22631,6 +23295,9 @@
         },
         {
           "name": "HiddenMaxOrderByAggregateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22666,6 +23333,9 @@
         },
         {
           "name": "HiddenMinOrderByAggregateInput",
+          "meta": {
+            "grouping": "Hidden"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22701,6 +23371,9 @@
         },
         {
           "name": "UserCreategradesInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22722,6 +23395,9 @@
         },
         {
           "name": "UserCreatealiasesInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -22743,6 +23419,9 @@
         },
         {
           "name": "postCreateNestedManyWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -22834,6 +23513,9 @@
         },
         {
           "name": "postCreateNestedManyWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -22925,6 +23607,9 @@
         },
         {
           "name": "postUncheckedCreateNestedManyWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -23016,6 +23701,9 @@
         },
         {
           "name": "postUncheckedCreateNestedManyWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -23107,6 +23795,9 @@
         },
         {
           "name": "StringFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23128,6 +23819,9 @@
         },
         {
           "name": "NullableStringFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23154,6 +23848,9 @@
         },
         {
           "name": "IntFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23223,6 +23920,9 @@
         },
         {
           "name": "FloatFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23292,6 +23992,9 @@
         },
         {
           "name": "EnumRoleFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23314,6 +24017,9 @@
         },
         {
           "name": "UserUpdategradesInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23352,6 +24058,9 @@
         },
         {
           "name": "UserUpdatealiasesInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -23390,6 +24099,9 @@
         },
         {
           "name": "postUpdateManyWithoutAuthorNestedInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -23614,6 +24326,9 @@
         },
         {
           "name": "postUpdateManyWithoutEditorNestedInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -23838,6 +24553,9 @@
         },
         {
           "name": "postUncheckedUpdateManyWithoutAuthorNestedInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24062,6 +24780,9 @@
         },
         {
           "name": "postUncheckedUpdateManyWithoutEditorNestedInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24286,6 +25007,9 @@
         },
         {
           "name": "UserCreateNestedOneWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24340,6 +25064,9 @@
         },
         {
           "name": "UserCreateNestedOneWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24394,6 +25121,9 @@
         },
         {
           "name": "DateTimeFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -24415,6 +25145,9 @@
         },
         {
           "name": "BoolFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -24436,6 +25169,9 @@
         },
         {
           "name": "NullableEnumPostKindFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -24463,6 +25199,9 @@
         },
         {
           "name": "UserUpdateOneRequiredWithoutPostsNestedInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24555,6 +25294,9 @@
         },
         {
           "name": "UserUpdateOneWithoutEditorPostsNestedInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24683,6 +25425,9 @@
         },
         {
           "name": "NullableIntFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -24757,6 +25502,9 @@
         },
         {
           "name": "DirectorCreateNestedOneWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24811,6 +25559,9 @@
         },
         {
           "name": "DirectorUpdateOneRequiredWithoutMoviesNestedInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24903,6 +25654,9 @@
         },
         {
           "name": "MovieCreateNestedManyWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -24994,6 +25748,9 @@
         },
         {
           "name": "MovieUncheckedCreateNestedManyWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25085,6 +25842,9 @@
         },
         {
           "name": "MovieUpdateManyWithoutDirectorNestedInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25309,6 +26069,9 @@
         },
         {
           "name": "MovieUncheckedUpdateManyWithoutDirectorNestedInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25533,6 +26296,9 @@
         },
         {
           "name": "CreatorCreateNestedManyWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25611,6 +26377,9 @@
         },
         {
           "name": "CreatorCreateNestedOneWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25665,6 +26434,9 @@
         },
         {
           "name": "CreatorUncheckedCreateNestedManyWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25743,6 +26515,9 @@
         },
         {
           "name": "CreatorUpdateManyWithoutLikesNestedInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -25954,6 +26729,9 @@
         },
         {
           "name": "CreatorUpdateOneWithoutProblemsNestedInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26082,6 +26860,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateManyWithoutLikesNestedInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26293,6 +27074,9 @@
         },
         {
           "name": "ProblemCreateNestedManyWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26371,6 +27155,9 @@
         },
         {
           "name": "ProblemCreateNestedManyWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26462,6 +27249,9 @@
         },
         {
           "name": "ProblemUncheckedCreateNestedManyWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26540,6 +27330,9 @@
         },
         {
           "name": "ProblemUncheckedCreateNestedManyWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26631,6 +27424,9 @@
         },
         {
           "name": "ProblemUpdateManyWithoutLikedByNestedInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -26842,6 +27638,9 @@
         },
         {
           "name": "ProblemUpdateManyWithoutCreatorNestedInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -27066,6 +27865,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateManyWithoutLikedByNestedInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -27277,6 +28079,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateManyWithoutCreatorNestedInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -27501,6 +28306,9 @@
         },
         {
           "name": "NullableBigIntFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -27575,6 +28383,9 @@
         },
         {
           "name": "NullableBytesFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -27601,6 +28412,9 @@
         },
         {
           "name": "NullableDecimalFieldUpdateOperationsInput",
+          "meta": {
+            "grouping": "NativeTypeModel"
+          },
           "constraints": {
             "maxNumFields": 1,
             "minNumFields": 1
@@ -30969,6 +31783,25 @@
               ]
             },
             {
+              "name": "mode",
+              "isRequired": false,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "QueryMode",
+                  "namespace": "prisma",
+                  "location": "enumTypes",
+                  "isList": false
+                },
+                {
+                  "type": "EnumQueryModeFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                }
+              ]
+            },
+            {
               "name": "string_contains",
               "isRequired": false,
               "isNullable": false,
@@ -31023,29 +31856,6 @@
               ]
             },
             {
-              "name": "array_contains",
-              "isRequired": false,
-              "isNullable": true,
-              "inputTypes": [
-                {
-                  "type": "Json",
-                  "location": "scalar",
-                  "isList": false
-                },
-                {
-                  "type": "JsonFieldRefInput",
-                  "namespace": "prisma",
-                  "location": "fieldRefTypes",
-                  "isList": false
-                },
-                {
-                  "type": "Null",
-                  "location": "scalar",
-                  "isList": false
-                }
-              ]
-            },
-            {
               "name": "array_starts_with",
               "isRequired": false,
               "isNullable": true,
@@ -31070,6 +31880,29 @@
             },
             {
               "name": "array_ends_with",
+              "isRequired": false,
+              "isNullable": true,
+              "inputTypes": [
+                {
+                  "type": "Json",
+                  "location": "scalar",
+                  "isList": false
+                },
+                {
+                  "type": "JsonFieldRefInput",
+                  "namespace": "prisma",
+                  "location": "fieldRefTypes",
+                  "isList": false
+                },
+                {
+                  "type": "Null",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "array_contains",
               "isRequired": false,
               "isNullable": true,
               "inputTypes": [
@@ -32254,6 +33087,9 @@
         },
         {
           "name": "postCreateWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32401,6 +33237,9 @@
         },
         {
           "name": "postUncheckedCreateWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32552,6 +33391,9 @@
         },
         {
           "name": "postCreateOrConnectWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32593,6 +33435,9 @@
         },
         {
           "name": "postCreateManyAuthorInputEnvelope",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32633,6 +33478,9 @@
         },
         {
           "name": "postCreateWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32780,6 +33628,9 @@
         },
         {
           "name": "postUncheckedCreateWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32926,6 +33777,9 @@
         },
         {
           "name": "postCreateOrConnectWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -32967,6 +33821,9 @@
         },
         {
           "name": "postCreateManyEditorInputEnvelope",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33007,6 +33864,9 @@
         },
         {
           "name": "postUpsertWithWhereUniqueWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33067,6 +33927,9 @@
         },
         {
           "name": "postUpdateWithWhereUniqueWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33108,6 +33971,9 @@
         },
         {
           "name": "postUpdateManyWithWhereWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33150,7 +34016,8 @@
         {
           "name": "postScalarWhereInput",
           "meta": {
-            "source": "post"
+            "source": "post",
+            "grouping": "post"
           },
           "constraints": {
             "maxNumFields": null,
@@ -33421,6 +34288,9 @@
         },
         {
           "name": "postUpsertWithWhereUniqueWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33481,6 +34351,9 @@
         },
         {
           "name": "postUpdateWithWhereUniqueWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33522,6 +34395,9 @@
         },
         {
           "name": "postUpdateManyWithWhereWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33563,6 +34439,9 @@
         },
         {
           "name": "UserCreateWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33699,6 +34578,9 @@
         },
         {
           "name": "UserUncheckedCreateWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33847,6 +34729,9 @@
         },
         {
           "name": "UserCreateOrConnectWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -33888,6 +34773,9 @@
         },
         {
           "name": "UserCreateWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34024,6 +34912,9 @@
         },
         {
           "name": "UserUncheckedCreateWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34172,6 +35063,9 @@
         },
         {
           "name": "UserCreateOrConnectWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34213,6 +35107,9 @@
         },
         {
           "name": "UserUpsertWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34273,6 +35170,9 @@
         },
         {
           "name": "UserUpdateToOneWithWhereWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34314,6 +35214,9 @@
         },
         {
           "name": "UserUpdateWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34486,6 +35389,9 @@
         },
         {
           "name": "UserUncheckedUpdateWithoutPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34676,6 +35582,9 @@
         },
         {
           "name": "UserUpsertWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34736,6 +35645,9 @@
         },
         {
           "name": "UserUpdateToOneWithWhereWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34777,6 +35689,9 @@
         },
         {
           "name": "UserUpdateWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -34949,6 +35864,9 @@
         },
         {
           "name": "UserUncheckedUpdateWithoutEditorPostsInput",
+          "meta": {
+            "grouping": "User"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35139,6 +36057,9 @@
         },
         {
           "name": "DirectorCreateWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35172,6 +36093,9 @@
         },
         {
           "name": "DirectorUncheckedCreateWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35205,6 +36129,9 @@
         },
         {
           "name": "DirectorCreateOrConnectWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35246,6 +36173,9 @@
         },
         {
           "name": "DirectorUpsertWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35306,6 +36236,9 @@
         },
         {
           "name": "DirectorUpdateToOneWithWhereWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35347,6 +36280,9 @@
         },
         {
           "name": "DirectorUpdateWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35392,6 +36328,9 @@
         },
         {
           "name": "DirectorUncheckedUpdateWithoutMoviesInput",
+          "meta": {
+            "grouping": "Director"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35437,6 +36376,9 @@
         },
         {
           "name": "MovieCreateWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35458,6 +36400,9 @@
         },
         {
           "name": "MovieUncheckedCreateWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35479,6 +36424,9 @@
         },
         {
           "name": "MovieCreateOrConnectWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35520,6 +36468,9 @@
         },
         {
           "name": "MovieCreateManyDirectorInputEnvelope",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35560,6 +36511,9 @@
         },
         {
           "name": "MovieUpsertWithWhereUniqueWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35620,6 +36574,9 @@
         },
         {
           "name": "MovieUpdateWithWhereUniqueWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35661,6 +36618,9 @@
         },
         {
           "name": "MovieUpdateManyWithWhereWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35703,7 +36663,8 @@
         {
           "name": "MovieScalarWhereInput",
           "meta": {
-            "source": "Movie"
+            "source": "Movie",
+            "grouping": "Movie"
           },
           "constraints": {
             "maxNumFields": null,
@@ -35819,6 +36780,9 @@
         },
         {
           "name": "CreatorCreateWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35853,6 +36817,9 @@
         },
         {
           "name": "CreatorUncheckedCreateWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35899,6 +36866,9 @@
         },
         {
           "name": "CreatorCreateOrConnectWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35940,6 +36910,9 @@
         },
         {
           "name": "CreatorCreateWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -35974,6 +36947,9 @@
         },
         {
           "name": "CreatorUncheckedCreateWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36020,6 +36996,9 @@
         },
         {
           "name": "CreatorCreateOrConnectWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36061,6 +37040,9 @@
         },
         {
           "name": "CreatorUpsertWithWhereUniqueWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36121,6 +37103,9 @@
         },
         {
           "name": "CreatorUpdateWithWhereUniqueWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36162,6 +37147,9 @@
         },
         {
           "name": "CreatorUpdateManyWithWhereWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36204,7 +37192,8 @@
         {
           "name": "CreatorScalarWhereInput",
           "meta": {
-            "source": "Creator"
+            "source": "Creator",
+            "grouping": "Creator"
           },
           "constraints": {
             "maxNumFields": null,
@@ -36302,6 +37291,9 @@
         },
         {
           "name": "CreatorUpsertWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36362,6 +37354,9 @@
         },
         {
           "name": "CreatorUpdateToOneWithWhereWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36403,6 +37398,9 @@
         },
         {
           "name": "CreatorUpdateWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36443,6 +37441,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateWithoutProblemsInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36501,6 +37502,9 @@
         },
         {
           "name": "ProblemCreateWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36535,6 +37539,9 @@
         },
         {
           "name": "ProblemUncheckedCreateWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36585,6 +37592,9 @@
         },
         {
           "name": "ProblemCreateOrConnectWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36626,6 +37636,9 @@
         },
         {
           "name": "ProblemCreateWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36660,6 +37673,9 @@
         },
         {
           "name": "ProblemUncheckedCreateWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36706,6 +37722,9 @@
         },
         {
           "name": "ProblemCreateOrConnectWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36747,6 +37766,9 @@
         },
         {
           "name": "ProblemCreateManyCreatorInputEnvelope",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36787,6 +37809,9 @@
         },
         {
           "name": "ProblemUpsertWithWhereUniqueWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36847,6 +37872,9 @@
         },
         {
           "name": "ProblemUpdateWithWhereUniqueWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36888,6 +37916,9 @@
         },
         {
           "name": "ProblemUpdateManyWithWhereWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -36930,7 +37961,8 @@
         {
           "name": "ProblemScalarWhereInput",
           "meta": {
-            "source": "Problem"
+            "source": "Problem",
+            "grouping": "Problem"
           },
           "constraints": {
             "maxNumFields": null,
@@ -37051,6 +38083,9 @@
         },
         {
           "name": "ProblemUpsertWithWhereUniqueWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37111,6 +38146,9 @@
         },
         {
           "name": "ProblemUpdateWithWhereUniqueWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37152,6 +38190,9 @@
         },
         {
           "name": "ProblemUpdateManyWithWhereWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37193,6 +38234,9 @@
         },
         {
           "name": "postCreateManyAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37344,6 +38388,9 @@
         },
         {
           "name": "postCreateManyEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37490,6 +38537,9 @@
         },
         {
           "name": "postUpdateWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37685,6 +38735,9 @@
         },
         {
           "name": "postUncheckedUpdateWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -37890,6 +38943,9 @@
         },
         {
           "name": "postUncheckedUpdateManyWithoutAuthorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38095,6 +39151,9 @@
         },
         {
           "name": "postUpdateWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38290,6 +39349,9 @@
         },
         {
           "name": "postUncheckedUpdateWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38490,6 +39552,9 @@
         },
         {
           "name": "postUncheckedUpdateManyWithoutEditorInput",
+          "meta": {
+            "grouping": "post"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38690,6 +39755,9 @@
         },
         {
           "name": "MovieCreateManyDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38711,6 +39779,9 @@
         },
         {
           "name": "MovieUpdateWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38738,6 +39809,9 @@
         },
         {
           "name": "MovieUncheckedUpdateWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38765,6 +39839,9 @@
         },
         {
           "name": "MovieUncheckedUpdateManyWithoutDirectorInput",
+          "meta": {
+            "grouping": "Movie"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38792,6 +39869,9 @@
         },
         {
           "name": "CreatorUpdateWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38832,6 +39912,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38890,6 +39973,9 @@
         },
         {
           "name": "CreatorUncheckedUpdateManyWithoutLikesInput",
+          "meta": {
+            "grouping": "Creator"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38935,6 +40021,9 @@
         },
         {
           "name": "ProblemCreateManyCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -38968,6 +40057,9 @@
         },
         {
           "name": "ProblemUpdateWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -39008,6 +40100,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -39076,6 +40171,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateManyWithoutLikedByInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -39144,6 +40242,9 @@
         },
         {
           "name": "ProblemUpdateWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -39184,6 +40285,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -39242,6 +40346,9 @@
         },
         {
           "name": "ProblemUncheckedUpdateManyWithoutCreatorInput",
+          "meta": {
+            "grouping": "Problem"
+          },
           "constraints": {
             "maxNumFields": null,
             "minNumFields": null
@@ -45421,6 +46528,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -45429,6 +46548,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyUserAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "UserUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "UserUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "UserWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyUserAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -45443,6 +46618,18 @@
                       "type": "UserWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -45739,6 +46926,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -45747,6 +46946,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManypostAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "postUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "postUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "postWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManypostAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -45761,6 +47016,18 @@
                       "type": "postWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -46057,6 +47324,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -46065,6 +47344,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyCategoryAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CategoryUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CategoryUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CategoryWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyCategoryAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -46079,6 +47414,18 @@
                       "type": "CategoryWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -46375,6 +47722,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -46383,6 +47742,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyPatientAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "PatientUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "PatientUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "PatientWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyPatientAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -46397,6 +47812,18 @@
                       "type": "PatientWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -46693,6 +48120,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -46701,6 +48140,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyMovieAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "MovieUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "MovieUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "MovieWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyMovieAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -46715,6 +48210,18 @@
                       "type": "MovieWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -47011,6 +48518,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -47019,6 +48538,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyDirectorAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "DirectorUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "DirectorUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "DirectorWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyDirectorAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -47033,6 +48608,18 @@
                       "type": "DirectorWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -47329,6 +48916,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -47337,6 +48936,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyProblemAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "ProblemUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "ProblemUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "ProblemWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyProblemAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -47351,6 +49006,18 @@
                       "type": "ProblemWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -47647,6 +49314,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -47655,6 +49334,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyCreatorAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CreatorUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "CreatorUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CreatorWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyCreatorAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -47669,6 +49404,18 @@
                       "type": "CreatorWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -47965,6 +49712,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -47973,6 +49732,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyNativeTypeModelAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "NativeTypeModelUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "NativeTypeModelUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "NativeTypeModelWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyNativeTypeModelAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -47987,6 +49802,18 @@
                       "type": "NativeTypeModelWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -48283,6 +50110,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -48291,6 +50130,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyEquipmentAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "EquipmentUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "EquipmentUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "EquipmentWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyEquipmentAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -48305,6 +50200,18 @@
                       "type": "EquipmentWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -48601,6 +50508,18 @@
                       "isList": false
                     }
                   ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
                 }
               ],
               "isNullable": false,
@@ -48609,6 +50528,62 @@
                 "namespace": "prisma",
                 "location": "outputObjectTypes",
                 "isList": false
+              }
+            },
+            {
+              "name": "updateManyHiddenAndReturn",
+              "args": [
+                {
+                  "name": "data",
+                  "isRequired": true,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "HiddenUpdateManyMutationInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    },
+                    {
+                      "type": "HiddenUncheckedUpdateManyInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "HiddenWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": false,
+              "outputType": {
+                "type": "UpdateManyHiddenAndReturnOutputType",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": true
               }
             },
             {
@@ -48623,6 +50598,18 @@
                       "type": "HiddenWhereInput",
                       "namespace": "prisma",
                       "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                },
+                {
+                  "name": "limit",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "Int",
+                      "location": "scalar",
                       "isList": false
                     }
                   ]
@@ -53620,7 +55607,255 @@
           ]
         },
         {
+          "name": "UpdateManyUserAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "email",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "name",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "age",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "balance",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Float",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "amount",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Float",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "role",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Role",
+                "namespace": "model",
+                "location": "enumTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "grades",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": true
+              }
+            },
+            {
+              "name": "aliases",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": true
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManypostAndReturnOutputType",
+          "fields": [
+            {
+              "name": "uuid",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "createdAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "updatedAt",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "DateTime",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "published",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Boolean",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "title",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "subtitle",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "content",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "authorId",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "editorId",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "kind",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "PostKind",
+                "namespace": "model",
+                "location": "enumTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "metadata",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Json",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "author",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "User",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            },
+            {
+              "name": "editor",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "UserWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "User",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManypostAndReturnOutputType",
           "fields": [
             {
               "name": "uuid",
@@ -53807,7 +56042,77 @@
           ]
         },
         {
+          "name": "UpdateManyCategoryAndReturnOutputType",
+          "fields": [
+            {
+              "name": "name",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "slug",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "number",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyPatientAndReturnOutputType",
+          "fields": [
+            {
+              "name": "firstName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "lastName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "email",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManyPatientAndReturnOutputType",
           "fields": [
             {
               "name": "firstName",
@@ -53888,7 +56193,78 @@
           ]
         },
         {
+          "name": "UpdateManyMovieAndReturnOutputType",
+          "fields": [
+            {
+              "name": "directorFirstName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "directorLastName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "title",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "director",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Director",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyDirectorAndReturnOutputType",
+          "fields": [
+            {
+              "name": "firstName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "lastName",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManyDirectorAndReturnOutputType",
           "fields": [
             {
               "name": "firstName",
@@ -53973,7 +56349,92 @@
           ]
         },
         {
+          "name": "UpdateManyProblemAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "problemText",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "creatorId",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "creator",
+              "args": [
+                {
+                  "name": "where",
+                  "isRequired": false,
+                  "isNullable": false,
+                  "inputTypes": [
+                    {
+                      "type": "CreatorWhereInput",
+                      "namespace": "prisma",
+                      "location": "inputObjectTypes",
+                      "isList": false
+                    }
+                  ]
+                }
+              ],
+              "isNullable": true,
+              "outputType": {
+                "type": "Creator",
+                "namespace": "model",
+                "location": "outputObjectTypes",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyCreatorAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "name",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManyCreatorAndReturnOutputType",
           "fields": [
             {
               "name": "id",
@@ -54043,6 +56504,51 @@
           ]
         },
         {
+          "name": "UpdateManyNativeTypeModelAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "Int",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "bigInt",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "BigInt",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "byteA",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Bytes",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "decimal",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "Decimal",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyEquipmentAndReturnOutputType",
           "fields": [
             {
@@ -54068,7 +56574,57 @@
           ]
         },
         {
+          "name": "UpdateManyEquipmentAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "name",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
           "name": "CreateManyHiddenAndReturnOutputType",
+          "fields": [
+            {
+              "name": "id",
+              "args": [],
+              "isNullable": false,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            },
+            {
+              "name": "name",
+              "args": [],
+              "isNullable": true,
+              "outputType": {
+                "type": "String",
+                "location": "scalar",
+                "isList": false
+              }
+            }
+          ]
+        },
+        {
+          "name": "UpdateManyHiddenAndReturnOutputType",
           "fields": [
             {
               "name": "id",
@@ -54841,6 +57397,43 @@
           ]
         },
         {
+          "name": "EnumQueryModeFieldRefInput",
+          "allowTypes": [
+            {
+              "type": "QueryMode",
+              "namespace": "prisma",
+              "location": "enumTypes",
+              "isList": false
+            }
+          ],
+          "fields": [
+            {
+              "name": "_ref",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            },
+            {
+              "name": "_container",
+              "isRequired": true,
+              "isNullable": false,
+              "inputTypes": [
+                {
+                  "type": "String",
+                  "location": "scalar",
+                  "isList": false
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "BigIntFieldRefInput",
           "allowTypes": [
             {
@@ -55076,6 +57669,7 @@
         "findUniqueOrThrow": "findUniqueUserOrThrow",
         "groupBy": "groupByUser",
         "updateMany": "updateManyUser",
+        "updateManyAndReturn": "updateManyUserAndReturn",
         "updateOne": "updateOneUser",
         "upsertOne": "upsertOneUser"
       },
@@ -55094,6 +57688,7 @@
         "findUniqueOrThrow": "findUniquepostOrThrow",
         "groupBy": "groupBypost",
         "updateMany": "updateManypost",
+        "updateManyAndReturn": "updateManypostAndReturn",
         "updateOne": "updateOnepost",
         "upsertOne": "upsertOnepost"
       },
@@ -55112,6 +57707,7 @@
         "findUniqueOrThrow": "findUniqueCategoryOrThrow",
         "groupBy": "groupByCategory",
         "updateMany": "updateManyCategory",
+        "updateManyAndReturn": "updateManyCategoryAndReturn",
         "updateOne": "updateOneCategory",
         "upsertOne": "upsertOneCategory"
       },
@@ -55130,6 +57726,7 @@
         "findUniqueOrThrow": "findUniquePatientOrThrow",
         "groupBy": "groupByPatient",
         "updateMany": "updateManyPatient",
+        "updateManyAndReturn": "updateManyPatientAndReturn",
         "updateOne": "updateOnePatient",
         "upsertOne": "upsertOnePatient"
       },
@@ -55148,6 +57745,7 @@
         "findUniqueOrThrow": "findUniqueMovieOrThrow",
         "groupBy": "groupByMovie",
         "updateMany": "updateManyMovie",
+        "updateManyAndReturn": "updateManyMovieAndReturn",
         "updateOne": "updateOneMovie",
         "upsertOne": "upsertOneMovie"
       },
@@ -55166,6 +57764,7 @@
         "findUniqueOrThrow": "findUniqueDirectorOrThrow",
         "groupBy": "groupByDirector",
         "updateMany": "updateManyDirector",
+        "updateManyAndReturn": "updateManyDirectorAndReturn",
         "updateOne": "updateOneDirector",
         "upsertOne": "upsertOneDirector"
       },
@@ -55184,6 +57783,7 @@
         "findUniqueOrThrow": "findUniqueProblemOrThrow",
         "groupBy": "groupByProblem",
         "updateMany": "updateManyProblem",
+        "updateManyAndReturn": "updateManyProblemAndReturn",
         "updateOne": "updateOneProblem",
         "upsertOne": "upsertOneProblem"
       },
@@ -55202,6 +57802,7 @@
         "findUniqueOrThrow": "findUniqueCreatorOrThrow",
         "groupBy": "groupByCreator",
         "updateMany": "updateManyCreator",
+        "updateManyAndReturn": "updateManyCreatorAndReturn",
         "updateOne": "updateOneCreator",
         "upsertOne": "upsertOneCreator"
       },
@@ -55220,6 +57821,7 @@
         "findUniqueOrThrow": "findUniqueNativeTypeModelOrThrow",
         "groupBy": "groupByNativeTypeModel",
         "updateMany": "updateManyNativeTypeModel",
+        "updateManyAndReturn": "updateManyNativeTypeModelAndReturn",
         "updateOne": "updateOneNativeTypeModel",
         "upsertOne": "upsertOneNativeTypeModel"
       },
@@ -55238,6 +57840,7 @@
         "findUniqueOrThrow": "findUniqueEquipmentOrThrow",
         "groupBy": "groupByEquipment",
         "updateMany": "updateManyEquipment",
+        "updateManyAndReturn": "updateManyEquipmentAndReturn",
         "updateOne": "updateOneEquipment",
         "upsertOne": "upsertOneEquipment"
       },
@@ -55256,6 +57859,7 @@
         "findUniqueOrThrow": "findUniqueHiddenOrThrow",
         "groupBy": "groupByHidden",
         "updateMany": "updateManyHidden",
+        "updateManyAndReturn": "updateManyHiddenAndReturn",
         "updateOne": "updateOneHidden",
         "upsertOne": "upsertOneHidden"
       }

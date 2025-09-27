@@ -8,4 +8,9 @@ export class DeleteManyDirectorArgs {
     nullable: true
   })
   where?: DirectorWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

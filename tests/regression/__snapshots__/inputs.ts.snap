@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`inputs should generate proper ScalarWhereWithAggregatesInput for model: SampleScalarWhereWithAggregatesInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
@@ -340,6 +340,7 @@ import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
 import { NestedIntFilter } from \\"../inputs/NestedIntFilter\\";
 import { NestedJsonFilter } from \\"../inputs/NestedJsonFilter\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"JsonWithAggregatesFilter\\", {})
 export class JsonWithAggregatesFilter {
@@ -352,6 +353,11 @@ export class JsonWithAggregatesFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -371,17 +377,17 @@ export class JsonWithAggregatesFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -1065,11 +1071,89 @@ export { StringWithAggregatesFilter } from \\"./StringWithAggregatesFilter\\";
 "
 `;
 
+exports[`inputs should properly generate input type classes for filtering Bytes fields: BytesFieldUpdateOperationsInput 1`] = `
+"import * as TypeGraphQL from \\"type-graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
+
+@TypeGraphQL.InputType(\\"BytesFieldUpdateOperationsInput\\", {})
+export class BytesFieldUpdateOperationsInput {
+  @TypeGraphQL.Field(_type => BytesScalar, {
+    nullable: true
+  })
+  set?: Uint8Array | undefined;
+}
+"
+`;
+
+exports[`inputs should properly generate input type classes for filtering Bytes fields: BytesFilter 1`] = `
+"import * as TypeGraphQL from \\"type-graphql\\";
+import * as GraphQLScalars from \\"graphql-scalars\\";
+import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
+import { NestedBytesFilter } from \\"../inputs/NestedBytesFilter\\";
+
+@TypeGraphQL.InputType(\\"BytesFilter\\", {})
+export class BytesFilter {
+  @TypeGraphQL.Field(_type => BytesScalar, {
+    nullable: true
+  })
+  equals?: Uint8Array | undefined;
+
+  @TypeGraphQL.Field(_type => [BytesScalar], {
+    nullable: true
+  })
+  in?: Uint8Array[] | undefined;
+
+  @TypeGraphQL.Field(_type => [BytesScalar], {
+    nullable: true
+  })
+  notIn?: Uint8Array[] | undefined;
+
+  @TypeGraphQL.Field(_type => NestedBytesFilter, {
+    nullable: true
+  })
+  not?: NestedBytesFilter | undefined;
+}
+"
+`;
+
+exports[`inputs should properly generate input type classes for filtering Bytes fields: index 1`] = `
+"export { BytesFieldUpdateOperationsInput } from \\"./BytesFieldUpdateOperationsInput\\";
+export { BytesFilter } from \\"./BytesFilter\\";
+export { BytesModelAvgOrderByAggregateInput } from \\"./BytesModelAvgOrderByAggregateInput\\";
+export { BytesModelCountOrderByAggregateInput } from \\"./BytesModelCountOrderByAggregateInput\\";
+export { BytesModelCreateInput } from \\"./BytesModelCreateInput\\";
+export { BytesModelCreateManyInput } from \\"./BytesModelCreateManyInput\\";
+export { BytesModelMaxOrderByAggregateInput } from \\"./BytesModelMaxOrderByAggregateInput\\";
+export { BytesModelMinOrderByAggregateInput } from \\"./BytesModelMinOrderByAggregateInput\\";
+export { BytesModelOrderByWithAggregationInput } from \\"./BytesModelOrderByWithAggregationInput\\";
+export { BytesModelOrderByWithRelationInput } from \\"./BytesModelOrderByWithRelationInput\\";
+export { BytesModelScalarWhereWithAggregatesInput } from \\"./BytesModelScalarWhereWithAggregatesInput\\";
+export { BytesModelSumOrderByAggregateInput } from \\"./BytesModelSumOrderByAggregateInput\\";
+export { BytesModelUpdateInput } from \\"./BytesModelUpdateInput\\";
+export { BytesModelUpdateManyMutationInput } from \\"./BytesModelUpdateManyMutationInput\\";
+export { BytesModelWhereInput } from \\"./BytesModelWhereInput\\";
+export { BytesModelWhereUniqueInput } from \\"./BytesModelWhereUniqueInput\\";
+export { BytesWithAggregatesFilter } from \\"./BytesWithAggregatesFilter\\";
+export { IntFieldUpdateOperationsInput } from \\"./IntFieldUpdateOperationsInput\\";
+export { IntFilter } from \\"./IntFilter\\";
+export { IntWithAggregatesFilter } from \\"./IntWithAggregatesFilter\\";
+export { NestedBytesFilter } from \\"./NestedBytesFilter\\";
+export { NestedBytesWithAggregatesFilter } from \\"./NestedBytesWithAggregatesFilter\\";
+export { NestedFloatFilter } from \\"./NestedFloatFilter\\";
+export { NestedIntFilter } from \\"./NestedIntFilter\\";
+export { NestedIntWithAggregatesFilter } from \\"./NestedIntWithAggregatesFilter\\";
+"
+`;
+
 exports[`inputs should properly generate input type classes for filtering json fields: JsonFilter 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"JsonFilter\\", {})
 export class JsonFilter {
@@ -1082,6 +1166,11 @@ export class JsonFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -1101,17 +1190,17 @@ export class JsonFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -1148,6 +1237,7 @@ import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
 import { NestedIntFilter } from \\"../inputs/NestedIntFilter\\";
 import { NestedJsonFilter } from \\"../inputs/NestedJsonFilter\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"JsonWithAggregatesFilter\\", {})
 export class JsonWithAggregatesFilter {
@@ -1160,6 +1250,11 @@ export class JsonWithAggregatesFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -1179,17 +1274,17 @@ export class JsonWithAggregatesFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -1239,6 +1334,7 @@ exports[`inputs should properly generate input type classes for filtering json f
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"NestedJsonFilter\\", {})
 export class NestedJsonFilter {
@@ -1251,6 +1347,11 @@ export class NestedJsonFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -1270,17 +1371,17 @@ export class NestedJsonFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -1833,28 +1934,6 @@ export class FirstModelOrderByWithRelationInput {
 "
 `;
 
-exports[`inputs should properly generate input type classes for filtering models by one to many relation fields: FirstModelRelationFilter 1`] = `
-"import * as TypeGraphQL from \\"type-graphql\\";
-import * as GraphQLScalars from \\"graphql-scalars\\";
-import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
-import { FirstModelWhereInput } from \\"../inputs/FirstModelWhereInput\\";
-
-@TypeGraphQL.InputType(\\"FirstModelRelationFilter\\", {})
-export class FirstModelRelationFilter {
-  @TypeGraphQL.Field(_type => FirstModelWhereInput, {
-    nullable: true
-  })
-  is?: FirstModelWhereInput | undefined;
-
-  @TypeGraphQL.Field(_type => FirstModelWhereInput, {
-    nullable: true
-  })
-  isNot?: FirstModelWhereInput | undefined;
-}
-"
-`;
-
 exports[`inputs should properly generate input type classes for filtering models by one to many relation fields: FirstModelWhereInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
@@ -2073,7 +2152,7 @@ exports[`inputs should properly generate input type classes for filtering models
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { FirstModelRelationFilter } from \\"../inputs/FirstModelRelationFilter\\";
+import { FirstModelScalarRelationFilter } from \\"../inputs/FirstModelScalarRelationFilter\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
 import { StringFilter } from \\"../inputs/StringFilter\\";
@@ -2115,10 +2194,10 @@ export class SecondModelWhereInput {
   })
   firstModelFieldId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => FirstModelRelationFilter, {
+  @TypeGraphQL.Field(_type => FirstModelScalarRelationFilter, {
     nullable: true
   })
-  firstModelField?: FirstModelRelationFilter | undefined;
+  firstModelField?: FirstModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -2128,7 +2207,7 @@ exports[`inputs should properly generate input type classes for filtering models
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { FirstModelRelationFilter } from \\"../inputs/FirstModelRelationFilter\\";
+import { FirstModelScalarRelationFilter } from \\"../inputs/FirstModelScalarRelationFilter\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
 import { SecondModelWhereInput } from \\"../inputs/SecondModelWhereInput\\";
@@ -2170,10 +2249,10 @@ export class SecondModelWhereUniqueInput {
   })
   firstModelFieldId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => FirstModelRelationFilter, {
+  @TypeGraphQL.Field(_type => FirstModelScalarRelationFilter, {
     nullable: true
   })
-  firstModelField?: FirstModelRelationFilter | undefined;
+  firstModelField?: FirstModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -2190,7 +2269,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -2465,6 +2544,7 @@ exports[`inputs should properly generate input type classes for filtering scalar
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"JsonFilter\\", {})
 export class JsonFilter {
@@ -2477,6 +2557,11 @@ export class JsonFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -2496,17 +2581,17 @@ export class JsonFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -2715,6 +2800,7 @@ exports[`inputs should properly generate input type classes for filtering scalar
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
+import { QueryMode } from \\"../../enums/QueryMode\\";
 
 @TypeGraphQL.InputType(\\"NestedJsonFilter\\", {})
 export class NestedJsonFilter {
@@ -2727,6 +2813,11 @@ export class NestedJsonFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: \\"default\\" | \\"insensitive\\" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -2746,17 +2837,17 @@ export class NestedJsonFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
@@ -3232,7 +3323,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -3460,7 +3551,7 @@ export { DirectorMaxOrderByAggregateInput } from \\"./DirectorMaxOrderByAggregat
 export { DirectorMinOrderByAggregateInput } from \\"./DirectorMinOrderByAggregateInput\\";
 export { DirectorOrderByWithAggregationInput } from \\"./DirectorOrderByWithAggregationInput\\";
 export { DirectorOrderByWithRelationInput } from \\"./DirectorOrderByWithRelationInput\\";
-export { DirectorRelationFilter } from \\"./DirectorRelationFilter\\";
+export { DirectorScalarRelationFilter } from \\"./DirectorScalarRelationFilter\\";
 export { DirectorScalarWhereWithAggregatesInput } from \\"./DirectorScalarWhereWithAggregatesInput\\";
 export { DirectorSumOrderByAggregateInput } from \\"./DirectorSumOrderByAggregateInput\\";
 export { DirectorUpdateInput } from \\"./DirectorUpdateInput\\";
@@ -3634,7 +3725,7 @@ exports[`inputs should properly generate input type classes for model with id ke
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { DirectorRelationFilter } from \\"../inputs/DirectorRelationFilter\\";
+import { DirectorScalarRelationFilter } from \\"../inputs/DirectorScalarRelationFilter\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { StringFilter } from \\"../inputs/StringFilter\\";
 
@@ -3675,10 +3766,10 @@ export class MovieWhereInput {
   })
   rating?: FloatFilter | undefined;
 
-  @TypeGraphQL.Field(_type => DirectorRelationFilter, {
+  @TypeGraphQL.Field(_type => DirectorScalarRelationFilter, {
     nullable: true
   })
-  director?: DirectorRelationFilter | undefined;
+  director?: DirectorScalarRelationFilter | undefined;
 }
 "
 `;
@@ -3688,7 +3779,7 @@ exports[`inputs should properly generate input type classes for model with id ke
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { DirectorRelationFilter } from \\"../inputs/DirectorRelationFilter\\";
+import { DirectorScalarRelationFilter } from \\"../inputs/DirectorScalarRelationFilter\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { MovieDirectorFirstNameDirectorLastNameTitleCompoundUniqueInput } from \\"../inputs/MovieDirectorFirstNameDirectorLastNameTitleCompoundUniqueInput\\";
 import { MovieWhereInput } from \\"../inputs/MovieWhereInput\\";
@@ -3736,10 +3827,10 @@ export class MovieWhereUniqueInput {
   })
   rating?: FloatFilter | undefined;
 
-  @TypeGraphQL.Field(_type => DirectorRelationFilter, {
+  @TypeGraphQL.Field(_type => DirectorScalarRelationFilter, {
     nullable: true
   })
-  director?: DirectorRelationFilter | undefined;
+  director?: DirectorScalarRelationFilter | undefined;
 }
 "
 `;
@@ -3757,7 +3848,7 @@ export { DirectorMaxOrderByAggregateInput } from \\"./DirectorMaxOrderByAggregat
 export { DirectorMinOrderByAggregateInput } from \\"./DirectorMinOrderByAggregateInput\\";
 export { DirectorOrderByWithAggregationInput } from \\"./DirectorOrderByWithAggregationInput\\";
 export { DirectorOrderByWithRelationInput } from \\"./DirectorOrderByWithRelationInput\\";
-export { DirectorRelationFilter } from \\"./DirectorRelationFilter\\";
+export { DirectorScalarRelationFilter } from \\"./DirectorScalarRelationFilter\\";
 export { DirectorScalarWhereWithAggregatesInput } from \\"./DirectorScalarWhereWithAggregatesInput\\";
 export { DirectorSumOrderByAggregateInput } from \\"./DirectorSumOrderByAggregateInput\\";
 export { DirectorUpdateInput } from \\"./DirectorUpdateInput\\";
@@ -3818,7 +3909,7 @@ exports[`inputs should properly generate input type classes for model with nativ
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 
 @TypeGraphQL.InputType(\\"NativeTypeModelCreateInput\\", {})
 export class NativeTypeModelCreateInput {
@@ -3827,10 +3918,10 @@ export class NativeTypeModelCreateInput {
   })
   bigInt?: bigint | undefined;
 
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  byteA?: Buffer | undefined;
+  byteA?: Uint8Array | undefined;
 
   @TypeGraphQL.Field(_type => DecimalJSScalar, {
     nullable: true
@@ -4573,7 +4664,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -5910,7 +6001,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -5981,7 +6072,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -6176,25 +6267,25 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"BytesNullableFilter\\", {})
 export class BytesNullableFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableFilter, {
     nullable: true
@@ -6208,27 +6299,27 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 import { NestedBytesNullableWithAggregatesFilter } from \\"../inputs/NestedBytesNullableWithAggregatesFilter\\";
 import { NestedIntNullableFilter } from \\"../inputs/NestedIntNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"BytesNullableWithAggregatesFilter\\", {})
 export class BytesNullableWithAggregatesFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableWithAggregatesFilter, {
     nullable: true
@@ -6388,24 +6479,24 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 
 @TypeGraphQL.InputType(\\"NestedBytesNullableFilter\\", {})
 export class NestedBytesNullableFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableFilter, {
     nullable: true
@@ -6419,26 +6510,26 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 import { NestedIntNullableFilter } from \\"../inputs/NestedIntNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"NestedBytesNullableWithAggregatesFilter\\", {})
 export class NestedBytesNullableWithAggregatesFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableWithAggregatesFilter, {
     nullable: true
@@ -6632,14 +6723,14 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { DecimalJSScalar, BytesScalar } from \\"../../scalars\\";
 
 @TypeGraphQL.InputType(\\"NullableBytesFieldUpdateOperationsInput\\", {})
 export class NullableBytesFieldUpdateOperationsInput {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  set?: Buffer | undefined;
+  set?: Uint8Array | undefined;
 }
 "
 `;
@@ -6767,7 +6858,7 @@ export class FirstModelWhereUniqueInput {
 "
 `;
 
-exports[`inputs when \`fullTextSearch\` preview feature is enabled should properly generate input type classes with relevance and string search field: FirstModelOrderByRelevanceInput 1`] = `
+exports[`inputs when \`fullTextSearchPostgres\` preview feature is enabled should properly generate input type classes with relevance and string search field: FirstModelOrderByRelevanceInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
@@ -6795,7 +6886,7 @@ export class FirstModelOrderByRelevanceInput {
 "
 `;
 
-exports[`inputs when \`fullTextSearch\` preview feature is enabled should properly generate input type classes with relevance and string search field: FirstModelOrderByWithRelationInput 1`] = `
+exports[`inputs when \`fullTextSearchPostgres\` preview feature is enabled should properly generate input type classes with relevance and string search field: FirstModelOrderByWithRelationInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
@@ -6834,7 +6925,7 @@ export class FirstModelOrderByWithRelationInput {
 "
 `;
 
-exports[`inputs when \`fullTextSearch\` preview feature is enabled should properly generate input type classes with relevance and string search field: NestedStringFilter 1`] = `
+exports[`inputs when \`fullTextSearchPostgres\` preview feature is enabled should properly generate input type classes with relevance and string search field: NestedStringFilter 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
@@ -6905,7 +6996,7 @@ export class NestedStringFilter {
 "
 `;
 
-exports[`inputs when \`fullTextSearch\` preview feature is enabled should properly generate input type classes with relevance and string search field: StringFilter 1`] = `
+exports[`inputs when \`fullTextSearchPostgres\` preview feature is enabled should properly generate input type classes with relevance and string search field: StringFilter 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
@@ -6983,7 +7074,7 @@ export class StringFilter {
 "
 `;
 
-exports[`inputs when \`fullTextSearch\` preview feature is enabled should properly generate input type classes with relevance and string search field: index 1`] = `
+exports[`inputs when \`fullTextSearchPostgres\` preview feature is enabled should properly generate input type classes with relevance and string search field: index 1`] = `
 "export { FirstModelAvgOrderByAggregateInput } from \\"./FirstModelAvgOrderByAggregateInput\\";
 export { FirstModelCountOrderByAggregateInput } from \\"./FirstModelCountOrderByAggregateInput\\";
 export { FirstModelCreateInput } from \\"./FirstModelCreateInput\\";
@@ -6996,7 +7087,7 @@ export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggr
 export { FirstModelOrderByRelevanceInput } from \\"./FirstModelOrderByRelevanceInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUpdateInput } from \\"./FirstModelUpdateInput\\";
@@ -7436,28 +7527,6 @@ export class RenamedFirstModelOrderByWithRelationInput {
 "
 `;
 
-exports[`inputs when model is renamed should properly generate input type classes for filtering models by one to many relation fields: RenamedFirstModelRelationFilter 1`] = `
-"import * as TypeGraphQL from \\"type-graphql\\";
-import * as GraphQLScalars from \\"graphql-scalars\\";
-import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
-import { RenamedFirstModelWhereInput } from \\"../inputs/RenamedFirstModelWhereInput\\";
-
-@TypeGraphQL.InputType(\\"RenamedFirstModelRelationFilter\\", {})
-export class RenamedFirstModelRelationFilter {
-  @TypeGraphQL.Field(_type => RenamedFirstModelWhereInput, {
-    nullable: true
-  })
-  is?: RenamedFirstModelWhereInput | undefined;
-
-  @TypeGraphQL.Field(_type => RenamedFirstModelWhereInput, {
-    nullable: true
-  })
-  isNot?: RenamedFirstModelWhereInput | undefined;
-}
-"
-`;
-
 exports[`inputs when model is renamed should properly generate input type classes for filtering models by one to many relation fields: RenamedFirstModelWhereInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
@@ -7678,7 +7747,7 @@ import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
-import { RenamedFirstModelRelationFilter } from \\"../inputs/RenamedFirstModelRelationFilter\\";
+import { RenamedFirstModelScalarRelationFilter } from \\"../inputs/RenamedFirstModelScalarRelationFilter\\";
 import { StringFilter } from \\"../inputs/StringFilter\\";
 
 @TypeGraphQL.InputType(\\"RenamedSecondModelWhereInput\\", {})
@@ -7718,10 +7787,10 @@ export class RenamedSecondModelWhereInput {
   })
   firstModelFieldId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => RenamedFirstModelRelationFilter, {
+  @TypeGraphQL.Field(_type => RenamedFirstModelScalarRelationFilter, {
     nullable: true
   })
-  firstModelField?: RenamedFirstModelRelationFilter | undefined;
+  firstModelField?: RenamedFirstModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -7733,7 +7802,7 @@ import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
-import { RenamedFirstModelRelationFilter } from \\"../inputs/RenamedFirstModelRelationFilter\\";
+import { RenamedFirstModelScalarRelationFilter } from \\"../inputs/RenamedFirstModelScalarRelationFilter\\";
 import { RenamedSecondModelWhereInput } from \\"../inputs/RenamedSecondModelWhereInput\\";
 
 @TypeGraphQL.InputType(\\"RenamedSecondModelWhereUniqueInput\\", {})
@@ -7773,10 +7842,10 @@ export class RenamedSecondModelWhereUniqueInput {
   })
   firstModelFieldId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => RenamedFirstModelRelationFilter, {
+  @TypeGraphQL.Field(_type => RenamedFirstModelScalarRelationFilter, {
     nullable: true
   })
-  firstModelField?: RenamedFirstModelRelationFilter | undefined;
+  firstModelField?: RenamedFirstModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -7805,7 +7874,7 @@ export { RenamedFirstModelMaxOrderByAggregateInput } from \\"./RenamedFirstModel
 export { RenamedFirstModelMinOrderByAggregateInput } from \\"./RenamedFirstModelMinOrderByAggregateInput\\";
 export { RenamedFirstModelOrderByWithAggregationInput } from \\"./RenamedFirstModelOrderByWithAggregationInput\\";
 export { RenamedFirstModelOrderByWithRelationInput } from \\"./RenamedFirstModelOrderByWithRelationInput\\";
-export { RenamedFirstModelRelationFilter } from \\"./RenamedFirstModelRelationFilter\\";
+export { RenamedFirstModelScalarRelationFilter } from \\"./RenamedFirstModelScalarRelationFilter\\";
 export { RenamedFirstModelScalarWhereWithAggregatesInput } from \\"./RenamedFirstModelScalarWhereWithAggregatesInput\\";
 export { RenamedFirstModelSumOrderByAggregateInput } from \\"./RenamedFirstModelSumOrderByAggregateInput\\";
 export { RenamedFirstModelUpdateInput } from \\"./RenamedFirstModelUpdateInput\\";
@@ -7906,7 +7975,7 @@ import { BoolFilter } from \\"../inputs/BoolFilter\\";
 import { DateTimeFilter } from \\"../inputs/DateTimeFilter\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
-import { OtherModelRelationFilter } from \\"../inputs/OtherModelRelationFilter\\";
+import { OtherModelScalarRelationFilter } from \\"../inputs/OtherModelScalarRelationFilter\\";
 import { StringFilter } from \\"../inputs/StringFilter\\";
 
 @TypeGraphQL.InputType(\\"ExampleWhereInput\\", {})
@@ -7956,10 +8025,10 @@ export class ExampleWhereInput {
   })
   otherId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => OtherModelRelationFilter, {
+  @TypeGraphQL.Field(_type => OtherModelScalarRelationFilter, {
     nullable: true
   })
-  other?: OtherModelRelationFilter | undefined;
+  other?: OtherModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -7974,7 +8043,7 @@ import { DateTimeFilter } from \\"../inputs/DateTimeFilter\\";
 import { ExampleWhereInput } from \\"../inputs/ExampleWhereInput\\";
 import { FloatFilter } from \\"../inputs/FloatFilter\\";
 import { IntFilter } from \\"../inputs/IntFilter\\";
-import { OtherModelRelationFilter } from \\"../inputs/OtherModelRelationFilter\\";
+import { OtherModelScalarRelationFilter } from \\"../inputs/OtherModelScalarRelationFilter\\";
 
 @TypeGraphQL.InputType(\\"ExampleWhereUniqueInput\\", {})
 export class ExampleWhereUniqueInput {
@@ -8023,10 +8092,10 @@ export class ExampleWhereUniqueInput {
   })
   otherId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => OtherModelRelationFilter, {
+  @TypeGraphQL.Field(_type => OtherModelScalarRelationFilter, {
     nullable: true
   })
-  other?: OtherModelRelationFilter | undefined;
+  other?: OtherModelScalarRelationFilter | undefined;
 }
 "
 `;
@@ -8092,7 +8161,7 @@ export { OtherModelMaxOrderByAggregateInput } from \\"./OtherModelMaxOrderByAggr
 export { OtherModelMinOrderByAggregateInput } from \\"./OtherModelMinOrderByAggregateInput\\";
 export { OtherModelOrderByWithAggregationInput } from \\"./OtherModelOrderByWithAggregationInput\\";
 export { OtherModelOrderByWithRelationInput } from \\"./OtherModelOrderByWithRelationInput\\";
-export { OtherModelRelationFilter } from \\"./OtherModelRelationFilter\\";
+export { OtherModelScalarRelationFilter } from \\"./OtherModelScalarRelationFilter\\";
 export { OtherModelScalarWhereWithAggregatesInput } from \\"./OtherModelScalarWhereWithAggregatesInput\\";
 export { OtherModelSumOrderByAggregateInput } from \\"./OtherModelSumOrderByAggregateInput\\";
 export { OtherModelUpdateInput } from \\"./OtherModelUpdateInput\\";
@@ -8780,7 +8849,7 @@ export { FirstModelMaxOrderByAggregateInput } from \\"./FirstModelMaxOrderByAggr
 export { FirstModelMinOrderByAggregateInput } from \\"./FirstModelMinOrderByAggregateInput\\";
 export { FirstModelOrderByWithAggregationInput } from \\"./FirstModelOrderByWithAggregationInput\\";
 export { FirstModelOrderByWithRelationInput } from \\"./FirstModelOrderByWithRelationInput\\";
-export { FirstModelRelationFilter } from \\"./FirstModelRelationFilter\\";
+export { FirstModelScalarRelationFilter } from \\"./FirstModelScalarRelationFilter\\";
 export { FirstModelScalarWhereWithAggregatesInput } from \\"./FirstModelScalarWhereWithAggregatesInput\\";
 export { FirstModelSumOrderByAggregateInput } from \\"./FirstModelSumOrderByAggregateInput\\";
 export { FirstModelUncheckedCreateInput } from \\"./FirstModelUncheckedCreateInput\\";

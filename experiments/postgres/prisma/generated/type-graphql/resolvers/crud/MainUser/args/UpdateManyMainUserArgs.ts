@@ -14,4 +14,9 @@ export class UpdateManyMainUserArgs {
     nullable: true
   })
   where?: MainUserWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

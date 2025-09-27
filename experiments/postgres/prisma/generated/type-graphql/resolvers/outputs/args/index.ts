@@ -6,3 +6,5 @@ export { DirectorCountMoviesArgs } from "./DirectorCountMoviesArgs";
 export { MainUserCountEditorPostsArgs } from "./MainUserCountEditorPostsArgs";
 export { MainUserCountPostsArgs } from "./MainUserCountPostsArgs";
 export { ProblemCountLikedByArgs } from "./ProblemCountLikedByArgs";
+export { UpdateManyProblemAndReturnOutputTypeCreatorArgs } from "./UpdateManyProblemAndReturnOutputTypeCreatorArgs";
+export { UpdateManypostAndReturnOutputTypeEditorArgs } from "./UpdateManypostAndReturnOutputTypeEditorArgs";

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`structure should generate *.js and *.d.ts files when emitTranspiledCode is set to true: structure 1`] = `
 "
@@ -298,8 +298,8 @@ exports[`structure should generate *.js and *.d.ts files when emitTranspiledCode
       UserOrderByWithAggregationInput.js
       UserOrderByWithRelationInput.d.ts
       UserOrderByWithRelationInput.js
-      UserRelationFilter.d.ts
-      UserRelationFilter.js
+      UserScalarRelationFilter.d.ts
+      UserScalarRelationFilter.js
       UserScalarWhereWithAggregatesInput.d.ts
       UserScalarWhereWithAggregatesInput.js
       UserSumOrderByAggregateInput.d.ts
@@ -345,6 +345,10 @@ exports[`structure should generate *.js and *.d.ts files when emitTranspiledCode
       PostMinAggregate.js
       PostSumAggregate.d.ts
       PostSumAggregate.js
+      UpdateManyPostAndReturnOutputType.d.ts
+      UpdateManyPostAndReturnOutputType.js
+      UpdateManyUserAndReturnOutputType.d.ts
+      UpdateManyUserAndReturnOutputType.js
       UserAvgAggregate.d.ts
       UserAvgAggregate.js
       UserCount.d.ts
@@ -538,7 +542,7 @@ exports[`structure should generate proper folders and file names when model is r
       RenamedUserMinOrderByAggregateInput.ts
       RenamedUserOrderByWithAggregationInput.ts
       RenamedUserOrderByWithRelationInput.ts
-      RenamedUserRelationFilter.ts
+      RenamedUserScalarRelationFilter.ts
       RenamedUserScalarWhereWithAggregatesInput.ts
       RenamedUserSumOrderByAggregateInput.ts
       RenamedUserUpdateInput.ts
@@ -575,6 +579,8 @@ exports[`structure should generate proper folders and file names when model is r
       RenamedUserMaxAggregate.ts
       RenamedUserMinAggregate.ts
       RenamedUserSumAggregate.ts
+      UpdateManyPostAndReturnOutputType.ts
+      UpdateManyUserAndReturnOutputType.ts
       [args]
         RenamedUserCountPostsArgs.ts
         index.ts
@@ -749,7 +755,7 @@ exports[`structure should generate proper folders structure and file names for c
       UserMinOrderByAggregateInput.ts
       UserOrderByWithAggregationInput.ts
       UserOrderByWithRelationInput.ts
-      UserRelationFilter.ts
+      UserScalarRelationFilter.ts
       UserScalarWhereWithAggregatesInput.ts
       UserSumOrderByAggregateInput.ts
       UserUpdateInput.ts
@@ -773,6 +779,8 @@ exports[`structure should generate proper folders structure and file names for c
       PostMaxAggregate.ts
       PostMinAggregate.ts
       PostSumAggregate.ts
+      UpdateManyPostAndReturnOutputType.ts
+      UpdateManyUserAndReturnOutputType.ts
       UserAvgAggregate.ts
       UserCount.ts
       UserCountAggregate.ts

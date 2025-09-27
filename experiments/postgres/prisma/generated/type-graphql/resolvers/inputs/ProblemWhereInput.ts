@@ -3,7 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
 import { CreatorListRelationFilter } from "../inputs/CreatorListRelationFilter";
-import { CreatorNullableRelationFilter } from "../inputs/CreatorNullableRelationFilter";
+import { CreatorNullableScalarRelationFilter } from "../inputs/CreatorNullableScalarRelationFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { IntNullableFilter } from "../inputs/IntNullableFilter";
 import { StringFilter } from "../inputs/StringFilter";
@@ -45,8 +45,8 @@ export class ProblemWhereInput {
   })
   likedBy?: CreatorListRelationFilter | undefined;
 
-  @TypeGraphQL.Field(_type => CreatorNullableRelationFilter, {
+  @TypeGraphQL.Field(_type => CreatorNullableScalarRelationFilter, {
     nullable: true
   })
-  creator?: CreatorNullableRelationFilter | undefined;
+  creator?: CreatorNullableScalarRelationFilter | undefined;
 }

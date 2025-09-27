@@ -8,4 +8,9 @@ export class DeleteManyNativeTypeModelArgs {
     nullable: true
   })
   where?: NativeTypeModelWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

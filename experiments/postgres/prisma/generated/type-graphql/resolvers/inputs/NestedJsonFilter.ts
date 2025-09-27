@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
+import { QueryMode } from "../../enums/QueryMode";
 
 @TypeGraphQL.InputType("NestedJsonFilter", {})
 export class NestedJsonFilter {
@@ -14,6 +15,11 @@ export class NestedJsonFilter {
     nullable: true
   })
   path?: string[] | undefined;
+
+  @TypeGraphQL.Field(_type => QueryMode, {
+    nullable: true
+  })
+  mode?: "default" | "insensitive" | undefined;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true
@@ -33,17 +39,17 @@ export class NestedJsonFilter {
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
-  array_contains?: Prisma.InputJsonValue | undefined;
-
-  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
-    nullable: true
-  })
   array_starts_with?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true
   })
   array_ends_with?: Prisma.InputJsonValue | undefined;
+
+  @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
+    nullable: true
+  })
+  array_contains?: Prisma.InputJsonValue | undefined;
 
   @TypeGraphQL.Field(_type => GraphQLScalars.JSONResolver, {
     nullable: true

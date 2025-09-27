@@ -8,4 +8,9 @@ export class DeleteManyMovieArgs {
     nullable: true
   })
   where?: MovieWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`custom resolvers execution should be possible to use generated inputs, args and types to build own resolvers: custom posts resolver mocked response 1`] = `
 Object {

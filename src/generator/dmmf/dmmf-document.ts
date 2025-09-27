@@ -11,13 +11,16 @@ import {
 import { GeneratorOptions } from "../options";
 import { EmitBlockKind } from "../emit-block";
 
+const RESERVED_KEYWORDS: string[] = ["async", "await", "using"];
+
 export class DmmfDocument implements DMMF.Document {
-  private models: DMMF.Model[];
+  private readonly models: DMMF.Model[];
   datamodel: DMMF.Datamodel;
   schema: DMMF.Schema;
   enums: DMMF.Enum[];
   modelMappings: DMMF.ModelMapping[];
   relationModels: DMMF.RelationModel[];
+  scalarTypeNames: string[];
 
   constructor(
     { datamodel, schema, mappings }: PrismaDMMF.Document,
@@ -62,19 +65,38 @@ export class DmmfDocument implements DMMF.Document {
         const outputType = this.schema.outputTypes.find(
           type => type.name === model.name,
         );
-        return (
-          outputType &&
-          outputType.fields.some(outputTypeField =>
-            model.fields.some(
-              modelField =>
-                modelField.name === outputTypeField.name &&
-                modelField.relationName !== undefined &&
-                !modelField.isOmitted.output,
-            ),
-          )
+        return outputType?.fields.some(outputTypeField =>
+          model.fields.some(
+            modelField =>
+              modelField.name === outputTypeField.name &&
+              modelField.relationName !== undefined &&
+              !modelField.isOmitted.output,
+          ),
         );
       })
       .map(generateRelationModel(this));
+
+    const scalarTypes = new Set<string>();
+    this.schema.inputTypes.forEach(inputType =>
+      inputType.fields.forEach(field => {
+        if (field.selectedInputType.location === "scalar") {
+          scalarTypes.add(field.selectedInputType.type);
+        }
+      }),
+    );
+    this.schema.outputTypes.forEach(outputType =>
+      outputType.fields.forEach(field => {
+        if (field.outputType.location === "scalar") {
+          scalarTypes.add(field.outputType.type);
+        }
+        field.args.forEach(arg => {
+          if (arg.selectedInputType.location === "scalar") {
+            scalarTypes.add(arg.selectedInputType.type);
+          }
+        });
+      }),
+    );
+    this.scalarTypeNames = ["Bytes", "Decimal", ...scalarTypes];
   }
 
   getModelTypeName(modelName: string): string | undefined {

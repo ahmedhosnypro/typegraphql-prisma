@@ -3,7 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
 import { CommentWhereInput } from "../inputs/CommentWhereInput";
-import { PostRelationFilter } from "../inputs/PostRelationFilter";
+import { PostScalarRelationFilter } from "../inputs/PostScalarRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 
 @TypeGraphQL.InputType("CommentWhereUniqueInput", {})
@@ -38,8 +38,8 @@ export class CommentWhereUniqueInput {
   })
   comment?: StringFilter | undefined;
 
-  @TypeGraphQL.Field(_type => PostRelationFilter, {
+  @TypeGraphQL.Field(_type => PostScalarRelationFilter, {
     nullable: true
   })
-  post?: PostRelationFilter | undefined;
+  post?: PostScalarRelationFilter | undefined;
 }

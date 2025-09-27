@@ -34,7 +34,7 @@ export { CreatorCreateWithoutProblemsInput } from "./CreatorCreateWithoutProblem
 export { CreatorListRelationFilter } from "./CreatorListRelationFilter";
 export { CreatorMaxOrderByAggregateInput } from "./CreatorMaxOrderByAggregateInput";
 export { CreatorMinOrderByAggregateInput } from "./CreatorMinOrderByAggregateInput";
-export { CreatorNullableRelationFilter } from "./CreatorNullableRelationFilter";
+export { CreatorNullableScalarRelationFilter } from "./CreatorNullableScalarRelationFilter";
 export { CreatorOrderByRelationAggregateInput } from "./CreatorOrderByRelationAggregateInput";
 export { CreatorOrderByRelevanceInput } from "./CreatorOrderByRelevanceInput";
 export { CreatorOrderByWithAggregationInput } from "./CreatorOrderByWithAggregationInput";
@@ -72,7 +72,7 @@ export { DirectorMinOrderByAggregateInput } from "./DirectorMinOrderByAggregateI
 export { DirectorOrderByRelevanceInput } from "./DirectorOrderByRelevanceInput";
 export { DirectorOrderByWithAggregationInput } from "./DirectorOrderByWithAggregationInput";
 export { DirectorOrderByWithRelationInput } from "./DirectorOrderByWithRelationInput";
-export { DirectorRelationFilter } from "./DirectorRelationFilter";
+export { DirectorScalarRelationFilter } from "./DirectorScalarRelationFilter";
 export { DirectorScalarWhereWithAggregatesInput } from "./DirectorScalarWhereWithAggregatesInput";
 export { DirectorUpdateInput } from "./DirectorUpdateInput";
 export { DirectorUpdateManyMutationInput } from "./DirectorUpdateManyMutationInput";
@@ -141,7 +141,7 @@ export { MainUserMinOrderByAggregateInput } from "./MainUserMinOrderByAggregateI
 export { MainUserOrderByRelevanceInput } from "./MainUserOrderByRelevanceInput";
 export { MainUserOrderByWithAggregationInput } from "./MainUserOrderByWithAggregationInput";
 export { MainUserOrderByWithRelationInput } from "./MainUserOrderByWithRelationInput";
-export { MainUserRelationFilter } from "./MainUserRelationFilter";
+export { MainUserScalarRelationFilter } from "./MainUserScalarRelationFilter";
 export { MainUserScalarWhereWithAggregatesInput } from "./MainUserScalarWhereWithAggregatesInput";
 export { MainUserSumOrderByAggregateInput } from "./MainUserSumOrderByAggregateInput";
 export { MainUserUpdateInput } from "./MainUserUpdateInput";
@@ -326,4 +326,4 @@ export { StringNullableFilter } from "./StringNullableFilter";
 export { StringNullableListFilter } from "./StringNullableListFilter";
 export { StringNullableWithAggregatesFilter } from "./StringNullableWithAggregatesFilter";
 export { StringWithAggregatesFilter } from "./StringWithAggregatesFilter";
-export { UserNullableRelationFilter } from "./UserNullableRelationFilter";
+export { UserNullableScalarRelationFilter } from "./UserNullableScalarRelationFilter";

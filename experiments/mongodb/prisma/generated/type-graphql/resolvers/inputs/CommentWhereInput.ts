@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
-import { PostRelationFilter } from "../inputs/PostRelationFilter";
+import { PostScalarRelationFilter } from "../inputs/PostScalarRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 
 @TypeGraphQL.InputType("CommentWhereInput", {})
@@ -37,8 +37,8 @@ export class CommentWhereInput {
   })
   comment?: StringFilter | undefined;
 
-  @TypeGraphQL.Field(_type => PostRelationFilter, {
+  @TypeGraphQL.Field(_type => PostScalarRelationFilter, {
     nullable: true
   })
-  post?: PostRelationFilter | undefined;
+  post?: PostScalarRelationFilter | undefined;
 }

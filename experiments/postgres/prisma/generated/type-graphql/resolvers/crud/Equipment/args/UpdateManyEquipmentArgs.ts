@@ -14,4 +14,9 @@ export class UpdateManyEquipmentArgs {
     nullable: true
   })
   where?: EquipmentWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

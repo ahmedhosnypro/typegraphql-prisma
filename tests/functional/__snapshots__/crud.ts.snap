@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`crud resolvers execution aggregations should properly call PrismaClient on \`aggregate\` action with advanced operations: aggregateUser mocked response 1`] = `
 Object {

@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
-import { DirectorRelationFilter } from "../inputs/DirectorRelationFilter";
+import { DirectorScalarRelationFilter } from "../inputs/DirectorScalarRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 
 @TypeGraphQL.InputType("MovieWhereInput", {})
@@ -37,8 +37,8 @@ export class MovieWhereInput {
   })
   title?: StringFilter | undefined;
 
-  @TypeGraphQL.Field(_type => DirectorRelationFilter, {
+  @TypeGraphQL.Field(_type => DirectorScalarRelationFilter, {
     nullable: true
   })
-  director?: DirectorRelationFilter | undefined;
+  director?: DirectorScalarRelationFilter | undefined;
 }

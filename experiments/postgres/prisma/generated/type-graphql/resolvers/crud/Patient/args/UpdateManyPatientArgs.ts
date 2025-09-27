@@ -14,4 +14,9 @@ export class UpdateManyPatientArgs {
     nullable: true
   })
   where?: PatientWhereInput | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  limit?: number | undefined;
 }

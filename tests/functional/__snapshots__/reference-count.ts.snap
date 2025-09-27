@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`relation counts querying should properly call PrismaClient on getting relation count with args: findManyUser - relation count with args - call args 1`] = `
 Array [

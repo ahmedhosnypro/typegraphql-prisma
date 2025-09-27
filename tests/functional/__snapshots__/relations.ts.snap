@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`relations resolvers execution composite primary key with name should properly call PrismaClient on fetching single relation: findUniqueOrThrowPost relations call args 1`] = `
 Array [

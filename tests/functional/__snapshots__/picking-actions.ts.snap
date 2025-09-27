@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`picking prisma actions should expose in GraphQL schema only actions chosen by single resolvers: graphQLSchemaSDL 1`] = `
 "# -----------------------------------------------

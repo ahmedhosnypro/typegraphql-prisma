@@ -1,24 +1,24 @@
 import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../../client";
-import { DecimalJSScalar } from "../../scalars";
+import { DecimalJSScalar, BytesScalar } from "../../scalars";
 
 @TypeGraphQL.InputType("NestedBytesNullableFilter", {})
 export class NestedBytesNullableFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableFilter, {
     nullable: true
