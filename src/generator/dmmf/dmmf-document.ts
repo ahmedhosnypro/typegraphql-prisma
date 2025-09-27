@@ -11,6 +11,8 @@ import {
 import { GeneratorOptions } from "../options";
 import { EmitBlockKind } from "../emit-block";
 
+const RESERVED_KEYWORDS: string[] = ["async", "await", "using"];
+
 export class DmmfDocument implements DMMF.Document {
   private models: DMMF.Model[];
   datamodel: DMMF.Datamodel;
@@ -28,6 +30,14 @@ export class DmmfDocument implements DMMF.Document {
       ...(schema.enumTypes.model ?? []),
     ];
     const models = [...datamodel.models, ...datamodel.types];
+
+    for (const model of models) {
+      if (RESERVED_KEYWORDS.includes(model.name)) {
+        throw new Error(
+          `Model name "${model.name}" is a reserved keyword. Please change it to a different name.`,
+        );
+      }
+    }
 
     // transform bare model without fields
     this.models = models.map(transformBareModel);
