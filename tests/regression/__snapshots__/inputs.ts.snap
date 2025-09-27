@@ -3818,7 +3818,7 @@ exports[`inputs should properly generate input type classes for model with nativ
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 
 @TypeGraphQL.InputType(\\"NativeTypeModelCreateInput\\", {})
 export class NativeTypeModelCreateInput {
@@ -3827,10 +3827,10 @@ export class NativeTypeModelCreateInput {
   })
   bigInt?: bigint | undefined;
 
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  byteA?: Buffer | undefined;
+  byteA?: Uint8Array | undefined;
 
   @TypeGraphQL.Field(_type => DecimalJSScalar, {
     nullable: true
@@ -6176,25 +6176,25 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"BytesNullableFilter\\", {})
 export class BytesNullableFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableFilter, {
     nullable: true
@@ -6208,27 +6208,27 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 import { NestedBytesNullableWithAggregatesFilter } from \\"../inputs/NestedBytesNullableWithAggregatesFilter\\";
 import { NestedIntNullableFilter } from \\"../inputs/NestedIntNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"BytesNullableWithAggregatesFilter\\", {})
 export class BytesNullableWithAggregatesFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableWithAggregatesFilter, {
     nullable: true
@@ -6388,24 +6388,24 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 
 @TypeGraphQL.InputType(\\"NestedBytesNullableFilter\\", {})
 export class NestedBytesNullableFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableFilter, {
     nullable: true
@@ -6419,26 +6419,26 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 import { NestedBytesNullableFilter } from \\"../inputs/NestedBytesNullableFilter\\";
 import { NestedIntNullableFilter } from \\"../inputs/NestedIntNullableFilter\\";
 
 @TypeGraphQL.InputType(\\"NestedBytesNullableWithAggregatesFilter\\", {})
 export class NestedBytesNullableWithAggregatesFilter {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  equals?: Buffer | undefined;
+  equals?: Uint8Array | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  in?: Buffer[] | undefined;
+  in?: Uint8Array[] | undefined;
 
-  @TypeGraphQL.Field(_type => [GraphQLScalars.ByteResolver], {
+  @TypeGraphQL.Field(_type => [BytesScalar], {
     nullable: true
   })
-  notIn?: Buffer[] | undefined;
+  notIn?: Uint8Array[] | undefined;
 
   @TypeGraphQL.Field(_type => NestedBytesNullableWithAggregatesFilter, {
     nullable: true
@@ -6632,14 +6632,14 @@ exports[`inputs should properly generate input type scalar filters classes for m
 "import * as TypeGraphQL from \\"type-graphql\\";
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
-import { DecimalJSScalar } from \\"../../scalars\\";
+import { BytesScalar, DecimalJSScalar } from \"../../scalars\";
 
 @TypeGraphQL.InputType(\\"NullableBytesFieldUpdateOperationsInput\\", {})
 export class NullableBytesFieldUpdateOperationsInput {
-  @TypeGraphQL.Field(_type => GraphQLScalars.ByteResolver, {
+  @TypeGraphQL.Field(_type => BytesScalar, {
     nullable: true
   })
-  set?: Buffer | undefined;
+  set?: Uint8Array | undefined;
 }
 "
 `;
