@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`omit-fields when \`omitInputFieldsByDefault\` generator option is provided should properly generate input type class for prisma model without the omitted field: UserCreateInput 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
