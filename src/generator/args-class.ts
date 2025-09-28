@@ -45,7 +45,7 @@ export default function generateArgsTypeClassFromArgs(
     fields
       .map(field => field.selectedInputType)
       .filter(argType => argType.location === "enumTypes")
-      .map(argType => argType.type as string),
+      .map(argType => argType.type),
     4,
   );
 

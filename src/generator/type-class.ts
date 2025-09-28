@@ -197,7 +197,7 @@ export function generateInputTypeClassFromType(
     inputType.fields
       .map(field => field.selectedInputType)
       .filter(fieldType => fieldType.location === "enumTypes")
-      .map(fieldType => fieldType.type as string),
+      .map(fieldType => fieldType.type),
     2,
   );
 

@@ -1,6 +1,6 @@
-export function parseStringBoolean(
-  stringBoolean: string | string[] | undefined,
-) {
+type StringOrStringArray = string | string[] | undefined;
+
+export function parseStringBoolean(stringBoolean: StringOrStringArray) {
   return stringBoolean === "true"
     ? true
     : stringBoolean === "false"
@@ -9,7 +9,7 @@ export function parseStringBoolean(
 }
 
 export function parseString(
-  value: string | string[] | undefined,
+  value: StringOrStringArray,
   optionPropertyName: string,
 ) {
   if (Array.isArray(value)) {
@@ -21,7 +21,7 @@ export function parseString(
 }
 
 export function parseStringArray<TAllowedValue extends string>(
-  stringArray: string | string[] | undefined,
+  stringArray: StringOrStringArray,
   optionPropertyName: string,
   allowedValues?: readonly TAllowedValue[],
 ): TAllowedValue[] | undefined {
@@ -55,7 +55,7 @@ export function parseStringArray<TAllowedValue extends string>(
 }
 
 export function parseStringEnum<TAllowedValue extends string>(
-  stringEnum: string | string[] | undefined,
+  stringEnum: StringOrStringArray,
   optionPropertyName: string,
   allowedValues: readonly TAllowedValue[],
 ): TAllowedValue | undefined {
