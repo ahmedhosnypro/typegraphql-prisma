@@ -1,6 +1,7 @@
 {
-  "name": "typegraphql-prisma",
-  "version": "0.28.0",
+  "name": "@ahmedhosnypro/typegraphql-prisma",
+  "version": "1.0.0",
+  "description": "Auto-generate TypeGraphQL schema and resolvers from your Prisma schema file.",
   "scripts": {
     "prepare": "husky",
     "build": "tsc",
@@ -29,21 +30,29 @@
     "type-graphql": "^1.1.1 || >=1.2.0-rc || >=2.0.0-beta || >=2.0.0-rc"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
     "@prisma/generator-helper": "^6.16.2",
     "@prisma/internals": "^6.16.2",
+    "fp-ts": "^2.16.11",
+    "fs-jetpack": "^5.1.0",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.6",
     "pluralize": "^8.0.0",
+    "resolve": "^1.22.10",
     "semver": "^7.7.2",
     "ts-morph": "^27.0.0",
-    "tslib": "^2.8.1"
+    "tslib": "^2.6.3"
   },
   "devDependencies": {
     "@jest/types": "^30.0.5",
     "@prisma/client": "^6.16.2",
+    "@prisma/generator": "^6.16.2",
     "@types/graphql-fields": "^1.3.9",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.5.2",
     "@types/pg": "^8.15.5",
     "@types/pluralize": "0.0.33",
+    "@types/resolve": "^1.20.6",
     "@types/semver": "^7.7.1",
     "@types/validator": "^13.15.3",
     "directory-tree": "^3.5.2",
@@ -71,15 +80,15 @@
     "node": ">=20.11.1"
   },
   "author": {
-    "name": "Michał Lytek",
-    "url": "https://github.com/MichalLytek"
+    "name": "ahmedhosnypro",
+    "url": "https://github.com/ahmedhosnypro"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichalLytek/typegraphql-prisma.git"
+    "url": "https://github.com/ahmedhosnypro/typegraphql-prisma.git"
   },
   "bugs": {
-    "url": "https://github.com/MichalLytek/typegraphql-prisma/issues"
+    "url": "https://github.com/ahmedhosnypro/typegraphql-prisma/issues"
   },
   "keywords": [
     "type-graphql",
@@ -97,6 +106,5 @@
     "**/*.{js,json}": [
       "prettier --write"
     ]
-  },
-  "private": true
+  }
 }
